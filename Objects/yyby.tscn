@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://bpwebcfrb068b"]
+
+[ext_resource type="Script" uid="uid://bt1d5qxofqgqw" path="res://Objects/yyby_node.gd" id="1_gr2r7"]
+[ext_resource type="Texture2D" uid="uid://c85iqfcmd0tn5" path="res://Assets/tails.png" id="1_ivqqc"]
+[ext_resource type="Texture2D" uid="uid://bhwot4ksc34eq" path="res://Assets/bases.png" id="2_glhnq"]
+[ext_resource type="Texture2D" uid="uid://bop2g4xkrt80w" path="res://Assets/outline.png" id="3_gr2r7"]
+[ext_resource type="Texture2D" uid="uid://c727jg611jffq" path="res://Assets/hats.png" id="4_glhnq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nr72b"]
+size = Vector2(29, 21)
+
+[node name="Yyby" type="Area2D" unique_id=1644953268]
+script = ExtResource("1_gr2r7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1688704971]
+position = Vector2(-1.5, 2.5)
+shape = SubResource("RectangleShape2D_nr72b")
+
+[node name="TailSpr" type="Sprite2D" parent="." unique_id=1386108723]
+texture = ExtResource("1_ivqqc")
+hframes = 20
+
+[node name="BaseSpr" type="Sprite2D" parent="." unique_id=1312211977]
+texture = ExtResource("2_glhnq")
+hframes = 20
+
+[node name="OutlineSpr" type="Sprite2D" parent="." unique_id=1898755163]
+texture = ExtResource("3_gr2r7")
+
+[node name="HatSpr" type="Sprite2D" parent="." unique_id=1599891223]
+texture = ExtResource("4_glhnq")
+hframes = 20

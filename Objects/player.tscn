@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://ct8y61damg1fb"]
+
+[ext_resource type="Script" uid="uid://qinf8musr65g" path="res://Objects/player.gd" id="1_3y5cq"]
+[ext_resource type="Texture2D" uid="uid://v227gtoimik5" path="res://Assets/player.png" id="1_y0qk3"]
+[ext_resource type="Texture2D" uid="uid://bv4n6de6wnohk" path="res://Assets/cursor_thing.png" id="3_2i4gt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3y5cq"]
+size = Vector2(18, 32)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2i4gt"]
+radius = 480.00104
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0ad8t"]
+radius = 128.0
+
+[node name="Player" type="Area2D" unique_id=416086468]
+z_index = 2
+script = ExtResource("1_3y5cq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=836167989]
+position = Vector2(-1, 1)
+shape = SubResource("RectangleShape2D_3y5cq")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=309923514]
+position = Vector2(0, -6)
+texture = ExtResource("1_y0qk3")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=582715390]
+
+[node name="Cursor_Spr" type="Sprite2D" parent="." unique_id=1939440475]
+position = Vector2(0, -6)
+texture = ExtResource("3_2i4gt")
+
+[node name="Call_Pos" type="Node2D" parent="Cursor_Spr" unique_id=1338037721]
+position = Vector2(-64, 0)
+
+[node name="CloseCall" type="Area2D" parent="." unique_id=812013165]
+visible = false
+
+[node name="CloseCallColl" type="CollisionShape2D" parent="CloseCall" unique_id=892043388]
+shape = SubResource("CircleShape2D_2i4gt")
+disabled = true
+
+[node name="PointCall" type="Area2D" parent="." unique_id=152641702]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PointCall" unique_id=2015627540]
+shape = SubResource("CircleShape2D_0ad8t")
+disabled = true
+
+[connection signal="area_entered" from="CloseCall" to="." method="_on_close_call_area_entered"]
+[connection signal="area_entered" from="PointCall" to="." method="_on_close_call_area_entered"]

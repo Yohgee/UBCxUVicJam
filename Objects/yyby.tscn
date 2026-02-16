@@ -5,9 +5,186 @@
 [ext_resource type="Texture2D" uid="uid://bhwot4ksc34eq" path="res://Assets/bases.png" id="2_glhnq"]
 [ext_resource type="Texture2D" uid="uid://bop2g4xkrt80w" path="res://Assets/outline.png" id="3_gr2r7"]
 [ext_resource type="Texture2D" uid="uid://c727jg611jffq" path="res://Assets/hats.png" id="4_glhnq"]
+[ext_resource type="Script" uid="uid://cilxe4wt2a67e" path="res://Scripts/StateMachine.gd" id="6_nr72b"]
+[ext_resource type="Script" uid="uid://dwadsd2ckuaag" path="res://Objects/States/idle.gd" id="7_0x5kd"]
+[ext_resource type="Script" uid="uid://dsn7tm2xff1uk" path="res://Objects/States/wander.gd" id="8_eiwno"]
+[ext_resource type="Texture2D" uid="uid://fxprutm25ida" path="res://Assets/exclamation.png" id="9_kcqd3"]
+[ext_resource type="Script" uid="uid://baygv8r8mdp0n" path="res://Objects/States/alert.gd" id="9_smlpp"]
+[ext_resource type="Script" uid="uid://dhga32e0gf6gl" path="res://Objects/States/follow.gd" id="10_0mgt5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nr72b"]
 size = Vector2(29, 21)
+
+[sub_resource type="Animation" id="Animation_eiwno"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("FullSprite:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("FullSprite:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("alert_spr:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_0mgt5"]
+resource_name = "alert"
+length = 0.5000125
+step = 0.125
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("FullSprite:position")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.125),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, -8), Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("FullSprite:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("alert_spr:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.125, 0.25, 0.375),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [true, false, true, false]
+}
+
+[sub_resource type="Animation" id="Animation_kcqd3"]
+resource_name = "idle"
+loop_mode = 1
+step = 0.125
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("FullSprite:position")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("FullSprite:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("alert_spr:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_smlpp"]
+resource_name = "walk"
+length = 0.5000125
+loop_mode = 1
+step = 0.125
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("FullSprite:position")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.125, 0.25, 0.375, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -8), Vector2(0, 0), Vector2(0, -8), Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("FullSprite:rotation")
+tracks/1/interp = 0
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.125, 0.25, 0.375, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.5235988, 0.0, -0.5235988, 0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("alert_spr:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0mgt5"]
+_data = {
+&"RESET": SubResource("Animation_eiwno"),
+&"alert": SubResource("Animation_0mgt5"),
+&"idle": SubResource("Animation_kcqd3"),
+&"walk": SubResource("Animation_smlpp")
+}
 
 [node name="Yyby" type="Area2D" unique_id=1644953268]
 script = ExtResource("1_gr2r7")
@@ -16,17 +193,48 @@ script = ExtResource("1_gr2r7")
 position = Vector2(-1.5, 2.5)
 shape = SubResource("RectangleShape2D_nr72b")
 
-[node name="TailSpr" type="Sprite2D" parent="." unique_id=1386108723]
+[node name="FullSprite" type="Node2D" parent="." unique_id=1621629682]
+
+[node name="TailSpr" type="Sprite2D" parent="FullSprite" unique_id=1386108723]
 texture = ExtResource("1_ivqqc")
 hframes = 20
 
-[node name="BaseSpr" type="Sprite2D" parent="." unique_id=1312211977]
+[node name="BaseSpr" type="Sprite2D" parent="FullSprite" unique_id=1312211977]
 texture = ExtResource("2_glhnq")
 hframes = 20
 
-[node name="OutlineSpr" type="Sprite2D" parent="." unique_id=1898755163]
+[node name="OutlineSpr" type="Sprite2D" parent="FullSprite" unique_id=1898755163]
 texture = ExtResource("3_gr2r7")
 
-[node name="HatSpr" type="Sprite2D" parent="." unique_id=1599891223]
+[node name="HatSpr" type="Sprite2D" parent="FullSprite" unique_id=1599891223]
 texture = ExtResource("4_glhnq")
 hframes = 20
+
+[node name="StateMachine" type="Node" parent="." unique_id=257451780 node_paths=PackedStringArray("cur_state")]
+script = ExtResource("6_nr72b")
+cur_state = NodePath("Idle")
+metadata/_custom_type_script = "uid://cilxe4wt2a67e"
+
+[node name="Idle" type="Node" parent="StateMachine" unique_id=427299401 node_paths=PackedStringArray("wander")]
+script = ExtResource("7_0x5kd")
+wander = NodePath("../Wander")
+state_name = "idle"
+
+[node name="Wander" type="Node" parent="StateMachine" unique_id=688007101]
+script = ExtResource("8_eiwno")
+
+[node name="Alert" type="Node" parent="StateMachine" unique_id=744684121 node_paths=PackedStringArray("ret_state")]
+script = ExtResource("9_smlpp")
+ret_state = NodePath("../Idle")
+
+[node name="Follow" type="Node" parent="StateMachine" unique_id=718650424 node_paths=PackedStringArray("ret_state")]
+script = ExtResource("10_0mgt5")
+ret_state = NodePath("../Idle")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=573705230]
+libraries/ = SubResource("AnimationLibrary_0mgt5")
+
+[node name="alert_spr" type="Sprite2D" parent="." unique_id=403948777]
+visible = false
+position = Vector2(0, -19)
+texture = ExtResource("9_kcqd3")

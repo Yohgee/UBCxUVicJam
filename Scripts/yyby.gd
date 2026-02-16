@@ -3,12 +3,15 @@ class_name Yyby extends Resource
 const BASE_NUM = 20
 const TAIL_USE_COL = [1,5,8,9,11,12]
 const HAT_USE_COL = [9,12,13]
+const BASE_SPEED = 100
 
 @export var mutations : Array[Mutation] = []
 @export var base : int = 0
 @export var hat : int = 0
 @export var tail : int = 0
 @export var col : Color = Color.WHITE
+@export var y_name : String = "eegee"
+@export var title : String = ""
 
 static func make_baby(p1 : Yyby, p2 : Yyby) -> Yyby:
 	var r = randf()
@@ -30,7 +33,14 @@ static func make_baby(p1 : Yyby, p2 : Yyby) -> Yyby:
 	
 	return baby
 
+static func generate_name() -> String:
+	var res = ""
+	for i in randi_range(3,10):
+		res += char(randi_range(1, 1000))
+	return res
+
 func generate_new():
+	y_name = generate_name()
 	base = randi_range(0, BASE_NUM - 1)
 	hat = randi_range(0, BASE_NUM - 1)
 	tail = randi_range(0, BASE_NUM - 1)

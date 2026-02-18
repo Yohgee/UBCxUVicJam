@@ -2,9 +2,21 @@
 
 [ext_resource type="Script" uid="uid://cpuy2wf7axlp" path="res://Scenes/world.gd" id="1_a02cp"]
 [ext_resource type="PackedScene" uid="uid://ct8y61damg1fb" path="res://Objects/player.tscn" id="2_go701"]
+[ext_resource type="PackedScene" uid="uid://obyrl2wnesjn" path="res://Objects/UI/yyby_grid.tscn" id="3_5a7ea"]
+[ext_resource type="PackedScene" uid="uid://33243bo8f723" path="res://Objects/UI/baby_makin_ui.tscn" id="4_8j60k"]
 
 [node name="World" type="Node2D" unique_id=1181866284]
 script = ExtResource("1_a02cp")
 
 [node name="Player" parent="." unique_id=416086468 instance=ExtResource("2_go701")]
 position = Vector2(444, 297)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1607811831]
+
+[node name="BabyMakinUI" parent="CanvasLayer" unique_id=357074432 node_paths=PackedStringArray("grid") instance=ExtResource("4_8j60k")]
+process_mode = 3
+visible = false
+grid = NodePath("../YybyGrid")
+
+[node name="YybyGrid" parent="CanvasLayer" unique_id=1441830770 instance=ExtResource("3_5a7ea")]
+visible = false

@@ -1,15 +1,14 @@
 uhhhhh
 # Currently DOing
--player
+-upgrade screen (choose 2 parents or reroll)
 
 # needs doing
 
-
--little guy movement
 -mutations
--upgrade screen (choose 2 parents or reroll)
 -enemies
 -little guys dying
 
 # done
+-little guy movementa
+-player
 -basic little guys

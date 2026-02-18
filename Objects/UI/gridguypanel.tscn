@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://d0aeqmn0jq3m4"]
+
+[ext_resource type="Texture2D" uid="uid://c85iqfcmd0tn5" path="res://Assets/tails.png" id="1_0xkto"]
+[ext_resource type="Script" uid="uid://b04x37ofv1vx1" path="res://Objects/UI/gridguypanel.gd" id="1_ms8nk"]
+[ext_resource type="Texture2D" uid="uid://bhwot4ksc34eq" path="res://Assets/bases.png" id="2_i1wpv"]
+[ext_resource type="Texture2D" uid="uid://bop2g4xkrt80w" path="res://Assets/outline.png" id="3_ms8nk"]
+[ext_resource type="Texture2D" uid="uid://c727jg611jffq" path="res://Assets/hats.png" id="4_0q6me"]
+[ext_resource type="Texture2D" uid="uid://cj0j87bbkuln1" path="res://Assets/x.png" id="5_08cdw"]
+[ext_resource type="PackedScene" uid="uid://bg61gnnbc2xhq" path="res://Objects/UI/yybypanel.tscn" id="6_i1wpv"]
+
+[node name="Panel" type="Panel" unique_id=907786860]
+custom_minimum_size = Vector2(48, 48)
+offset_right = 82.0
+offset_bottom = 82.0
+script = ExtResource("1_ms8nk")
+
+[node name="Control" type="Control" parent="." unique_id=227084558]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="FullSprite" type="Node2D" parent="Control" unique_id=941321825]
+y_sort_enabled = true
+
+[node name="TailSpr" type="Sprite2D" parent="Control/FullSprite" unique_id=966297198]
+y_sort_enabled = true
+texture = ExtResource("1_0xkto")
+hframes = 20
+
+[node name="BaseSpr" type="Sprite2D" parent="Control/FullSprite" unique_id=2041745099]
+y_sort_enabled = true
+texture = ExtResource("2_i1wpv")
+hframes = 20
+
+[node name="OutlineSpr" type="Sprite2D" parent="Control/FullSprite" unique_id=1898319004]
+y_sort_enabled = true
+texture = ExtResource("3_ms8nk")
+
+[node name="HatSpr" type="Sprite2D" parent="Control/FullSprite" unique_id=175941523]
+y_sort_enabled = true
+texture = ExtResource("4_0q6me")
+hframes = 20
+
+[node name="Sprite2D" type="Sprite2D" parent="Control/FullSprite" unique_id=1284219378]
+visible = false
+texture = ExtResource("5_08cdw")
+
+[node name="Panel" parent="." unique_id=1323142059 instance=ExtResource("6_i1wpv")]
+z_index = 3
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -104.0
+offset_top = -122.5
+offset_right = 104.0
+offset_bottom = 122.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

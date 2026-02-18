@@ -194,19 +194,24 @@ position = Vector2(-1.5, 2.5)
 shape = SubResource("RectangleShape2D_nr72b")
 
 [node name="FullSprite" type="Node2D" parent="." unique_id=1621629682]
+y_sort_enabled = true
 
 [node name="TailSpr" type="Sprite2D" parent="FullSprite" unique_id=1386108723]
+y_sort_enabled = true
 texture = ExtResource("1_ivqqc")
 hframes = 20
 
 [node name="BaseSpr" type="Sprite2D" parent="FullSprite" unique_id=1312211977]
+y_sort_enabled = true
 texture = ExtResource("2_glhnq")
 hframes = 20
 
 [node name="OutlineSpr" type="Sprite2D" parent="FullSprite" unique_id=1898755163]
+y_sort_enabled = true
 texture = ExtResource("3_gr2r7")
 
 [node name="HatSpr" type="Sprite2D" parent="FullSprite" unique_id=1599891223]
+y_sort_enabled = true
 texture = ExtResource("4_glhnq")
 hframes = 20
 

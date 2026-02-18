@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://obyrl2wnesjn"]
+
+[ext_resource type="Script" uid="uid://boj7pmkmfno8o" path="res://Objects/UI/yyby_grid.gd" id="1_jsx51"]
+[ext_resource type="Texture2D" uid="uid://cjjkon65m7j2q" path="res://Assets/arrowR.png" id="2_svx1k"]
+[ext_resource type="Texture2D" uid="uid://cbqe2bhbvd762" path="res://Assets/arrowL.png" id="3_k01nv"]
+
+[node name="YybyGrid" type="Control" unique_id=1441830770]
+process_mode = 3
+z_index = 5
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jsx51")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1786368927]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.33333334)
+
+[node name="GridContainer" type="GridContainer" parent="." unique_id=1808602984]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.05
+anchor_top = 0.1
+anchor_right = 0.95
+anchor_bottom = 0.95
+grow_horizontal = 2
+grow_vertical = 2
+columns = 17
+
+[node name="TextureButton" type="TextureButton" parent="." unique_id=218364536]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -40.0
+grow_horizontal = 0
+grow_vertical = 0
+texture_normal = ExtResource("2_svx1k")
+
+[node name="TextureButton2" type="TextureButton" parent="." unique_id=1131920549]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -40.0
+offset_right = 40.0
+grow_vertical = 0
+texture_normal = ExtResource("3_k01nv")
+
+[connection signal="pressed" from="TextureButton" to="." method="next_page"]
+[connection signal="pressed" from="TextureButton2" to="." method="_on_texture_button_2_pressed"]

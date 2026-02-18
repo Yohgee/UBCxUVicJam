@@ -1,0 +1,217 @@
+[gd_scene format=3 uid="uid://33243bo8f723"]
+
+[ext_resource type="Theme" uid="uid://bx66evu43t4b2" path="res://ui_theme.tres" id="1_eos4c"]
+[ext_resource type="Script" uid="uid://ccnb6de4b7q4w" path="res://Objects/UI/baby_makin_ui.gd" id="1_unt5b"]
+[ext_resource type="PackedScene" uid="uid://bg61gnnbc2xhq" path="res://Objects/UI/yybypanel.tscn" id="2_6qkwf"]
+[ext_resource type="StyleBox" uid="uid://c0tc77q2su3jt" path="res://Assets/ui/basestylebox.tres" id="3_wm4rh"]
+[ext_resource type="Texture2D" uid="uid://bp48vdh5f2jba" path="res://Assets/ui/panelgreen.png" id="3_wrsrl"]
+[ext_resource type="Texture2D" uid="uid://cbqe2bhbvd762" path="res://Assets/arrowL.png" id="4_ou8vw"]
+[ext_resource type="Texture2D" uid="uid://d0oy408pny06u" path="res://Assets/boxes.png" id="5_vqjgj"]
+[ext_resource type="Texture2D" uid="uid://bcr7pw32apaeb" path="res://Assets/ui/panelblue.png" id="5_xt7bv"]
+[ext_resource type="Texture2D" uid="uid://cj0j87bbkuln1" path="res://Assets/x.png" id="6_ajeff"]
+[ext_resource type="Texture2D" uid="uid://cjjkon65m7j2q" path="res://Assets/arrowR.png" id="7_ta1a1"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xt7bv"]
+texture = ExtResource("3_wrsrl")
+texture_margin_left = 16.0
+texture_margin_top = 16.0
+texture_margin_right = 16.0
+texture_margin_bottom = 16.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_unt5b"]
+texture = ExtResource("5_xt7bv")
+texture_margin_left = 16.0
+texture_margin_top = 16.0
+texture_margin_right = 16.0
+texture_margin_bottom = 16.0
+
+[node name="BabyMakinUI" type="Control" unique_id=357074432]
+z_index = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_unt5b")
+
+[node name="Panel" type="Panel" parent="." unique_id=1973172624]
+z_index = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -264.5
+offset_top = -177.5
+offset_right = 264.5
+offset_bottom = 177.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_eos4c")
+
+[node name="Parent1" parent="Panel" unique_id=1323142059 instance=ExtResource("2_6qkwf")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.05
+anchor_top = 0.5
+anchor_right = 0.05
+anchor_bottom = 0.5
+offset_top = -122.5
+offset_bottom = 122.5
+grow_vertical = 2
+
+[node name="Buttons" type="HBoxContainer" parent="Panel/Parent1" unique_id=1435924893]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -88.0
+offset_top = 5.0
+offset_right = 88.0
+offset_bottom = 45.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 16
+
+[node name="p1L" type="TextureButton" parent="Panel/Parent1/Buttons" unique_id=864472979]
+layout_mode = 2
+texture_normal = ExtResource("4_ou8vw")
+
+[node name="p1C" type="TextureButton" parent="Panel/Parent1/Buttons" unique_id=1602089363]
+layout_mode = 2
+texture_normal = ExtResource("5_vqjgj")
+
+[node name="p1x" type="TextureButton" parent="Panel/Parent1/Buttons" unique_id=292853063]
+layout_mode = 2
+texture_normal = ExtResource("6_ajeff")
+
+[node name="p1R" type="TextureButton" parent="Panel/Parent1/Buttons" unique_id=1673762514]
+layout_mode = 2
+texture_normal = ExtResource("7_ta1a1")
+
+[node name="Parent2" parent="Panel" unique_id=139032666 instance=ExtResource("2_6qkwf")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.95
+anchor_top = 0.5
+anchor_right = 0.95
+anchor_bottom = 0.5
+offset_left = -208.0
+offset_top = -122.5
+offset_right = 0.0
+offset_bottom = 122.5
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="Buttons2" type="HBoxContainer" parent="Panel/Parent2" unique_id=72619459]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -88.0
+offset_top = 5.0
+offset_right = 88.0
+offset_bottom = 45.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 16
+
+[node name="p2L" type="TextureButton" parent="Panel/Parent2/Buttons2" unique_id=998071137]
+layout_mode = 2
+texture_normal = ExtResource("4_ou8vw")
+
+[node name="p2C" type="TextureButton" parent="Panel/Parent2/Buttons2" unique_id=219949998]
+layout_mode = 2
+texture_normal = ExtResource("5_vqjgj")
+
+[node name="p2x" type="TextureButton" parent="Panel/Parent2/Buttons2" unique_id=1102635672]
+layout_mode = 2
+texture_normal = ExtResource("6_ajeff")
+
+[node name="p2R" type="TextureButton" parent="Panel/Parent2/Buttons2" unique_id=83350420]
+layout_mode = 2
+texture_normal = ExtResource("7_ta1a1")
+
+[node name="Result" parent="Panel" unique_id=1230016804 instance=ExtResource("2_6qkwf")]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -104.0
+offset_top = -122.5
+offset_right = 104.0
+offset_bottom = 122.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Panel" unique_id=938145649]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.05
+anchor_right = 0.5
+anchor_bottom = 0.05
+offset_left = -100.5
+offset_top = -7.25
+offset_right = 100.5
+offset_bottom = 17.75
+grow_horizontal = 2
+theme = ExtResource("1_eos4c")
+theme_override_font_sizes/font_size = 24
+text = "Expand The Gene Pool"
+
+[node name="Label2" type="Label" parent="Panel" unique_id=842900176]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.05
+anchor_right = 0.5
+anchor_bottom = 0.05
+offset_left = -122.5
+offset_top = 16.75
+offset_right = 122.5
+offset_bottom = 41.75
+grow_horizontal = 2
+theme = ExtResource("1_eos4c")
+theme_override_font_sizes/font_size = 12
+text = "(Both empty generates a genetically unique creature)"
+
+[node name="Button" type="Button" parent="." unique_id=1908460603]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -101.5
+offset_top = -84.0
+offset_right = 101.5
+offset_bottom = -35.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/outline_size = 4
+theme_override_styles/normal = SubResource("StyleBoxTexture_xt7bv")
+theme_override_styles/pressed = ExtResource("3_wm4rh")
+theme_override_styles/hover = SubResource("StyleBoxTexture_unt5b")
+theme_override_styles/disabled = ExtResource("3_wm4rh")
+theme_override_styles/focus = ExtResource("3_wm4rh")
+text = "Confirm Unnatural Selection"
+
+[connection signal="pressed" from="Panel/Parent1/Buttons/p1L" to="." method="_on_p_1l_pressed"]
+[connection signal="pressed" from="Panel/Parent1/Buttons/p1C" to="." method="_on_p_1c_pressed"]
+[connection signal="pressed" from="Panel/Parent1/Buttons/p1x" to="." method="_on_p_1x_pressed"]
+[connection signal="pressed" from="Panel/Parent1/Buttons/p1R" to="." method="_on_p_1r_pressed"]
+[connection signal="pressed" from="Panel/Parent2/Buttons2/p2L" to="." method="_on_p_2l_pressed"]
+[connection signal="pressed" from="Panel/Parent2/Buttons2/p2C" to="." method="_on_p_2c_pressed"]
+[connection signal="pressed" from="Panel/Parent2/Buttons2/p2x" to="." method="_on_p_2x_pressed"]
+[connection signal="pressed" from="Panel/Parent2/Buttons2/p2R" to="." method="_on_p_2r_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

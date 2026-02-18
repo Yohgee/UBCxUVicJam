@@ -13,7 +13,7 @@ func enter(e : Entity, _os : State):
 	if e is YybyNode:
 		yyby_node = e
 	t = randf_range(3, 6)
-	rand_fp = yyby_node.follow_point + (Vector2.RIGHT * yyby_node.fp_r).rotated(randf_range(0, 2* PI))
+	rand_fp = yyby_node.follow_point + (Vector2.RIGHT * randf() * yyby_node.fp_r).rotated(randf_range(0, 2* PI))
 	follow_dir = rand_fp - e.global_position
 	follow_dir = follow_dir.normalized()
 	yyby_node.full_sprite.scale.x = -follow_dir.x/abs(follow_dir.x)

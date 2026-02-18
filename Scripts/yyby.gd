@@ -5,6 +5,8 @@ const TAIL_USE_COL = [1,5,8,9,11,12]
 const HAT_USE_COL = [9,12,13]
 const BASE_SPEED = 100
 
+const TEST = preload("uid://mh5s2y4hso1m")
+
 @export var mutations : Array[Mutation] = []
 @export var base : int = 0
 @export var hat : int = 0
@@ -36,7 +38,7 @@ static func make_baby(p1 : Yyby, p2 : Yyby) -> Yyby:
 static func generate_name() -> String:
 	var res = ""
 	for i in randi_range(3,10):
-		res += char(randi_range(1, 1000))
+		res += char(randi_range(32, 591))
 	return res
 
 func generate_new():
@@ -45,3 +47,6 @@ func generate_new():
 	hat = randi_range(0, BASE_NUM - 1)
 	tail = randi_range(0, BASE_NUM - 1)
 	col = Color(randf(),randf(),randf())
+	mutations.append(TEST)
+	mutations.append(TEST)
+	mutations.append(TEST)

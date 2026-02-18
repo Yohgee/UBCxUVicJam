@@ -36,7 +36,7 @@ func _physics_process(delta: float) -> void:
 		select_circle_t = 0
 		if auto_command:
 			for s in selected_yyby:
-				s.get_command(saved_fp, 32)
+				s.get_command(saved_fp, 64)
 			selected_yyby.clear()
 	
 	if Input.is_action_just_pressed("follow") || Input.is_action_just_pressed("near_select"):

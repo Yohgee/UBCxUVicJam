@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://b5ipncdv1hpmo"]
+
+[ext_resource type="Theme" uid="uid://bx66evu43t4b2" path="res://ui_theme.tres" id="1_qq50e"]
+
+[node name="Hover Label2" type="Label" unique_id=431061647]
+custom_minimum_size = Vector2(164, 18)
+theme = ExtResource("1_qq50e")
+text = "Ability 1"
+horizontal_alignment = 1
+autowrap_mode = 2

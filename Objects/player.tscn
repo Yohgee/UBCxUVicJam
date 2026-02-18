@@ -35,7 +35,6 @@ texture = ExtResource("3_2i4gt")
 position = Vector2(-64, 0)
 
 [node name="CloseCall" type="Area2D" parent="." unique_id=812013165]
-visible = false
 
 [node name="CloseCallColl" type="CollisionShape2D" parent="CloseCall" unique_id=892043388]
 shape = SubResource("CircleShape2D_2i4gt")

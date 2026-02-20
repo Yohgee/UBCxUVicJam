@@ -10,6 +10,7 @@ time = 2.0
 bullet_speed = 150.0
 bullet = ExtResource("1_vclr2")
 spawn = ExtResource("3_fut2l")
+pe = false
 m_name = "Snowball"
 desc = "Shoot a snowball every 2 seconds"
 cat = "Snow"

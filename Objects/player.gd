@@ -7,7 +7,8 @@ const BASE_SPEED = 200
 @onready var point_call_coll: CollisionShape2D = $PointCall/CollisionShape2D
 @onready var call_pos: Node2D = $Cursor_Spr/Call_Pos
 @export var cramp : Gradient
-const BULLET = preload("uid://dkk3qmm3u7nek")
+# BULLET = preload("uid://dkk3qmm3u7nek")
+@export var bullet_scene : PackedScene
 @onready var main_spr: Sprite2D = $MainSpr
 @onready var shoot_plr: AudioStreamPlayer = $Shoot
 @onready var tweet_plr: AudioStreamPlayer = $tweet
@@ -80,7 +81,7 @@ func _physics_process(delta: float) -> void:
 	
 	if Input.is_action_pressed("shoot") && cd <=0:
 		cd = shoot_cd/haste
-		spawn_bullet(BULLET)
+		spawn_bullet(bullet_scene)
 	
 	if Input.is_action_pressed("command"):
 		point_call.position = get_viewport().get_mouse_position() - get_viewport_rect().size/2

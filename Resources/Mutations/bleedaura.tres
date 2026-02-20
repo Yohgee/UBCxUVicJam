@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="MOnKill" format=3 uid="uid://8ffwt3a6gh0o"]
+
+[ext_resource type="Script" uid="uid://b00ga813u2867" path="res://Mutations/onkill_spawner.gd" id="1_ua6va"]
+[ext_resource type="PackedScene" uid="uid://dxb4otnt3mqik" path="res://Objects/MutationObjs/blood_aura.tscn" id="2_ua6va"]
+
+[resource]
+script = ExtResource("1_ua6va")
+chance = 0.15
+spawn = ExtResource("2_ua6va")
+m_name = "Blood Aura"
+desc = "Chance on kill to create a bleeding aura"
+cat = "Knife"
+metadata/_custom_type_script = "uid://b00ga813u2867"

@@ -52,6 +52,7 @@ grow_vertical = 2
 theme = ExtResource("1_eos4c")
 
 [node name="Parent1" parent="Panel" unique_id=1323142059 instance=ExtResource("2_6qkwf")]
+z_index = 1
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.05
@@ -63,6 +64,7 @@ offset_bottom = 122.5
 grow_vertical = 2
 
 [node name="Buttons" type="HBoxContainer" parent="Panel/Parent1" unique_id=1435924893]
+z_index = -1
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -94,6 +96,7 @@ layout_mode = 2
 texture_normal = ExtResource("7_ta1a1")
 
 [node name="Parent2" parent="Panel" unique_id=139032666 instance=ExtResource("2_6qkwf")]
+z_index = 1
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.95
@@ -108,6 +111,7 @@ grow_horizontal = 0
 grow_vertical = 2
 
 [node name="Buttons2" type="HBoxContainer" parent="Panel/Parent2" unique_id=72619459]
+z_index = -1
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -140,6 +144,7 @@ texture_normal = ExtResource("7_ta1a1")
 
 [node name="Result" parent="Panel" unique_id=1230016804 instance=ExtResource("2_6qkwf")]
 visible = false
+z_index = 2
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5

@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://dhohkmv5bnb33"]
+
+[ext_resource type="Script" uid="uid://clpwv52h7r0ua" path="res://Objects/MutationObjs/stat_pickup.gd" id="1_r0ypu"]
+[ext_resource type="Texture2D" uid="uid://cckhrpi027q17" path="res://Assets/statspick.png" id="2_m6v0k"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6tdm8"]
+
+[node name="StatPickup" type="Area2D" unique_id=1805152159]
+script = ExtResource("1_r0ypu")
+stat = "haste"
+amnt = 0.4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1313169474]
+shape = SubResource("CircleShape2D_6tdm8")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1430639811]
+texture = ExtResource("2_m6v0k")
+hframes = 5
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

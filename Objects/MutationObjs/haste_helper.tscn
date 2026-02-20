@@ -16,7 +16,7 @@ amount = 0.4
 shape = SubResource("CircleShape2D_1pw18")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=256548317]
-modulate = Color(0.43815202, 0.73281527, 1, 1)
+modulate = Color(0.44, 0.7293333, 1, 0.78039217)
 texture = ExtResource("2_fsvb2")
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]

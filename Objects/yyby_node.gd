@@ -26,7 +26,6 @@ func _ready() -> void:
 	agility = yyby_res.n_agi
 	max_health = max_health + yyby_res.max_hp_buff
 	health = max_health
-	print(max_health)
 	base_spr.frame = yyby_res.base
 	hat_spr.frame = yyby_res.hat
 	tail_spr.frame = yyby_res.tail

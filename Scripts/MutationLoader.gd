@@ -19,11 +19,8 @@ func _ready() -> void:
 			cat_muts.get(r.cat).append(r)
 		file_name = d.get_next()
 	d.list_dir_end()
-	print(all_muts)
 
 func get_random_mutation(cat : String = "rand") -> Mutation:
-	#return preload("uid://cwclbj13kwqcv")
 	if cat == "rand" || !cat_muts.has(cat):
 		return all_muts.pick_random()
-	print(cat)
 	return cat_muts.get(cat).pick_random()

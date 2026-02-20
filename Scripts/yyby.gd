@@ -22,7 +22,6 @@ static func make_baby(p1 : Yyby, p2 : Yyby) -> Yyby:
 	var baby = Yyby.new()
 	baby.generate_new()
 	if r < 0.9:
-		print("wha")
 		if r < 0.4:
 			baby.col = Color(p1.col.r + randf_range(-0.2, 0.2), p1.col.g + randf_range(-0.2, 0.2), p1.col.b + randf_range(-0.2, 0.2))
 		else:

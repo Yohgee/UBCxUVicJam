@@ -11,7 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://dwdh2kl1vmbab" path="res://Objects/bg.tres" id="6_5ukr8"]
 [ext_resource type="PackedScene" uid="uid://bg61gnnbc2xhq" path="res://Objects/UI/yybypanel.tscn" id="9_ikia7"]
 [ext_resource type="StyleBox" uid="uid://c0tc77q2su3jt" path="res://Assets/ui/basestylebox.tres" id="10_7yui6"]
-[ext_resource type="AudioStream" uid="uid://bei56weftei0r" path="res://Assets/gamesong3_2026doneLOL.mp3" id="12_7yui6"]
+[ext_resource type="AudioStream" uid="uid://6yjmmb8pcipy" path="res://Assets/gamesong3_2026real.mp3" id="12_7yui6"]
 
 [node name="World" type="Node2D" unique_id=1181866284]
 script = ExtResource("1_a02cp")

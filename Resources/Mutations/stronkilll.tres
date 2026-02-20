@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="MOnKill" format=3 uid="uid://6tyno8f6a08"]
+
+[ext_resource type="Script" uid="uid://b00ga813u2867" path="res://Mutations/onkill_spawner.gd" id="1_l46hj"]
+[ext_resource type="PackedScene" uid="uid://dpseuddrl3dtg" path="res://Objects/MutationObjs/str_pickup.tscn" id="2_l46hj"]
+
+[resource]
+script = ExtResource("1_l46hj")
+chance = 0.3
+c_per_stack = 0.08
+spawn = ExtResource("2_l46hj")
+m_name = "Bloodlust"
+desc = "Chance on kill to drop a strength boost"
+cat = "StatDrop"
+metadata/_custom_type_script = "uid://b00ga813u2867"

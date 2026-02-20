@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="MOnKill" format=3 uid="uid://fuibv03oexg2"]
+
+[ext_resource type="Script" uid="uid://b00ga813u2867" path="res://Mutations/onkill_spawner.gd" id="1_ugjr7"]
+[ext_resource type="PackedScene" uid="uid://dhohkmv5bnb33" path="res://Objects/MutationObjs/haste_pickup.tscn" id="2_ugjr7"]
+
+[resource]
+script = ExtResource("1_ugjr7")
+chance = 0.3
+c_per_stack = 0.08
+spawn = ExtResource("2_ugjr7")
+m_name = "Haste Scavenger"
+desc = "Chance on kill to drop a haste boost"
+cat = "StatDrop"
+metadata/_custom_type_script = "uid://b00ga813u2867"

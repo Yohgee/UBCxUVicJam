@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://dxb4otnt3mqik"]
+
+[ext_resource type="Texture2D" uid="uid://cdjamld7lysyw" path="res://Assets/helpercircle.png" id="1_e637d"]
+[ext_resource type="Script" uid="uid://btjwma6qptxxp" path="res://Objects/MutationObjs/blood_aura.gd" id="1_sjavd"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_sjavd"]
+radius = 61.073727
+
+[node name="BloodAura" type="Area2D" unique_id=249645721]
+collision_layer = 0
+collision_mask = 5
+script = ExtResource("1_sjavd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1528666697]
+shape = SubResource("CircleShape2D_sjavd")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1123427306]
+modulate = Color(1.2742168, 0, 0, 1)
+texture = ExtResource("1_e637d")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

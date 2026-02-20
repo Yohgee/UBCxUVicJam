@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://88nkq2akw6tn"]
+
+[ext_resource type="Script" uid="uid://dlb6br8jshlct" path="res://Objects/MutationObjs/fire_status_real.gd" id="1_q02o7"]
+
+[node name="FireStatus" type="Node" unique_id=1264987505]
+script = ExtResource("1_q02o7")

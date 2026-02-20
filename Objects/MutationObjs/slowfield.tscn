@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://cumhccys2fnux"]
+
+[ext_resource type="Texture2D" uid="uid://cdjamld7lysyw" path="res://Assets/helpercircle.png" id="1_42yrg"]
+[ext_resource type="Script" uid="uid://0ki1bsglpd2i" path="res://Objects/MutationObjs/slowfield.gd" id="1_r6qou"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_r6qou"]
+radius = 64.12488
+
+[node name="Slowfield" type="Area2D" unique_id=1522939530]
+collision_layer = 0
+collision_mask = 5
+script = ExtResource("1_r6qou")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=24653905]
+shape = SubResource("CircleShape2D_r6qou")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=741076449]
+modulate = Color(1.3167871, 1.9616681, 2.9289904, 1)
+texture = ExtResource("1_42yrg")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="area_exited" from="." to="." method="_on_area_exited"]

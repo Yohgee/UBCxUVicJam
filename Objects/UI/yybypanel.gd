@@ -29,7 +29,6 @@ func set_res(nr : Yyby):
 	panel_container.visible = nr != null
 	x_spr.visible = nr == null
 	if nr == null:
-		print("?")
 		return
 	name_label.text = nr.y_name
 	title_label.text = nr.title

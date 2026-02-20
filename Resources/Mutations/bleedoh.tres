@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="MOnHit" format=3 uid="uid://bghfps77035pa"]
+
+[ext_resource type="Resource" uid="uid://b7w6rstpgpmkd" path="res://Objects/MutationObjs/bloodadder.tres" id="1_fruo8"]
+[ext_resource type="Script" uid="uid://bqwftu5frp121" path="res://Mutations/onhit_adder.gd" id="3_mi0af"]
+
+[resource]
+script = ExtResource("3_mi0af")
+n_adder_mut = ExtResource("1_fruo8")
+chance = 1.0
+m_name = "Hemorrhaging"
+desc = "Chance on hit to bleed"
+cat = "Knife"
+metadata/_custom_type_script = "uid://bqwftu5frp121"

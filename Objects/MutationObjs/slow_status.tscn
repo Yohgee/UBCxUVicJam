@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://badsrr2vt5ibt"]
+
+[ext_resource type="Script" uid="uid://cqtyxka5rt385" path="res://Objects/MutationObjs/slow_status.gd" id="1_der42"]
+
+[node name="slow_status" type="Node" unique_id=1106397012]
+script = ExtResource("1_der42")

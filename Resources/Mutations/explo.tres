@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="MOnKill" format=3 uid="uid://cer4q52khkx03"]
+
+[ext_resource type="Script" uid="uid://b00ga813u2867" path="res://Mutations/onkill_spawner.gd" id="1_bywe8"]
+[ext_resource type="PackedScene" uid="uid://fewkat6f3lhv" path="res://Objects/MutationObjs/explosion.tscn" id="2_l6rbr"]
+
+[resource]
+script = ExtResource("1_bywe8")
+chance = 0.2
+spawn = ExtResource("2_l6rbr")
+m_name = "Exploding"
+desc = "Chance on kill to explode"
+cat = "Fire"
+metadata/_custom_type_script = "uid://b00ga813u2867"

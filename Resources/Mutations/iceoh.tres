@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="MOnHit" format=3 uid="uid://cy0enfmhuqksn"]
+
+[ext_resource type="Script" uid="uid://b3p7ladumfplp" path="res://Mutations/node_adder.gd" id="1_pstic"]
+[ext_resource type="PackedScene" uid="uid://badsrr2vt5ibt" path="res://Objects/MutationObjs/slow_status.tscn" id="2_pstic"]
+[ext_resource type="Script" uid="uid://bqwftu5frp121" path="res://Mutations/onhit_adder.gd" id="3_fpw1x"]
+
+[sub_resource type="Resource" id="Resource_7nx1v"]
+script = ExtResource("1_pstic")
+spawn = ExtResource("2_pstic")
+pe = false
+m_name = "SlowSE"
+cat = "SE"
+metadata/_custom_type_script = "uid://b3p7ladumfplp"
+
+[resource]
+script = ExtResource("3_fpw1x")
+n_adder_mut = SubResource("Resource_7nx1v")
+chance = 0.2
+c_per_stack = 0.05
+m_name = "Freezing"
+desc = "Chance on hit to slow"
+cat = "Snow"
+metadata/_custom_type_script = "uid://bqwftu5frp121"

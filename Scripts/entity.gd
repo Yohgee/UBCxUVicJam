@@ -4,7 +4,10 @@ class_name Entity extends Area2D
 	set(v):
 		var temp = max_health
 		max_health = v
-		health += v - temp
+		if v >= health:
+			health += v - temp
+		else:
+			health = max_health
 @onready var health : float = max_health:
 	set(v):
 		health = min(v, max_health)
@@ -12,6 +15,7 @@ class_name Entity extends Area2D
 signal gave_damage(t : Entity, d : float)
 signal took_damage(s : Entity, d : float)
 signal on_death(pos : Vector2)
+signal on_get_kill(pos : Vector2)
 @onready var damage_plr: AudioStreamPlayer = $Damage
 const DEATH_SOUND = preload("uid://c8fc8larsr36y")
 
@@ -46,7 +50,10 @@ func _process(delta: float) -> void:
 		invunl -= delta
 
 func get_mutation(m : Mutation):
+	var old = m
 	m = m.duplicate()
+	if old.get("old_source") != null:
+		m.set("old_source", old.get("old_source"))
 	for cm in mutations:
 		if cm.m_name == m.m_name:
 			cm.on_get(self, true)
@@ -67,13 +74,15 @@ func take_damage(source : Entity, damage : float):
 	damage_plr.play()
 	health -= damage
 	took_damage.emit(source, damage)
+	if source:
+		source.give_damage(self, damage)
 	if health <= 0:
 		if source:
 			source.get_kill(global_position)
 		die()
 
 func get_kill(target_pos : Vector2):
-	print("i killed something at " + str(target_pos))
+	on_get_kill.emit(target_pos)
 
 func give_damage(target : Entity, damage : float):
 	gave_damage.emit(target, damage)

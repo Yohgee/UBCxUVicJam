@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://7exbu1v55683"]
+
+[ext_resource type="Script" uid="uid://cxk4cmks13drg" path="res://Objects/MutationObjs/bleed_status.gd" id="1_g7dp4"]
+
+[node name="Bleed_Status" type="Node" unique_id=577392356]
+script = ExtResource("1_g7dp4")
+tick_time = 0.4
+life_time = 1.2

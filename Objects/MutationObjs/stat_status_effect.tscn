@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://bjpkxcdwsyc5l"]
+
+[ext_resource type="Script" uid="uid://cggegojlyljek" path="res://Objects/MutationObjs/stat_status_effect.gd" id="1_e28br"]
+
+[node name="StatStatusEffect" type="Node" unique_id=1995372487]
+script = ExtResource("1_e28br")

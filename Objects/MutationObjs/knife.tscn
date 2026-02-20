@@ -11,7 +11,7 @@ collision_layer = 0
 collision_mask = 5
 script = ExtResource("1_ly3x4")
 damage = 4.0
-lifetime = 0.5
+lifetime = 0.4
 rotate_to_vel = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1087502203]

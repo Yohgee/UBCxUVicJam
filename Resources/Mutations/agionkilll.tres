@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="MOnKill" format=3 uid="uid://hqyv68h1c5u7"]
+
+[ext_resource type="Script" uid="uid://b00ga813u2867" path="res://Mutations/onkill_spawner.gd" id="1_rwb5k"]
+[ext_resource type="PackedScene" uid="uid://b02ywhq3bgwkf" path="res://Objects/MutationObjs/stat_pickup.tscn" id="2_aaqkg"]
+
+[resource]
+script = ExtResource("1_rwb5k")
+chance = 0.4
+c_per_stack = 0.08
+spawn = ExtResource("2_aaqkg")
+m_name = "Agility Scavenger"
+desc = "Chance on kill to drop an agility boost"
+cat = "StatDrop"
+metadata/_custom_type_script = "uid://b00ga813u2867"

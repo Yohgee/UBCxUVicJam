@@ -7,7 +7,6 @@ var guys : Array[YybyNode]
 
 func _ready() -> void:
 	for c in MutationLoader.cat_muts.keys():
-		print(c)
 		var ny : YybyNode = YYBY.instantiate()
 		var nr = Yyby.new()
 		var m : Mutation = MutationLoader.get_random_mutation(c)
@@ -47,3 +46,7 @@ func _on_button_pressed() -> void:
 	$AnimationPlayer.play("fade")
 	await $AnimationPlayer.animation_finished
 	get_tree().change_scene_to_file("res://Scenes/world.tscn")
+
+
+func _on_audio_stream_player_finished() -> void:
+	$AudioStreamPlayer.play()

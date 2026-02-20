@@ -12,8 +12,6 @@ func on_remove() -> bool:
 	stacks -= 1
 	if node && node.get(stat) != null:
 		node.set(stat, node.get(stat) - amount)
-	if node:
-		print(node.name + " has: " + str(stacks) + " of " + m_name )
 	if stacks <= 0:
 		return true
 	return false

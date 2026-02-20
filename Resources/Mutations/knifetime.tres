@@ -10,6 +10,7 @@ time = 1.5
 bullet_speed = 450.0
 bullet = ExtResource("1_vpsly")
 spawn = ExtResource("3_4dpgk")
+pe = false
 m_name = "Knife"
 desc = "Shoot a knife every 1.5 seconds"
 cat = "Knife"

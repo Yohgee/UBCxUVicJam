@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="MOnHit" format=3 uid="uid://cf3kfc4hojdv3"]
+
+[ext_resource type="Script" uid="uid://bqwftu5frp121" path="res://Mutations/onhit_adder.gd" id="1_rltua"]
+[ext_resource type="Script" uid="uid://b3p7ladumfplp" path="res://Mutations/node_adder.gd" id="1_ug02f"]
+[ext_resource type="PackedScene" uid="uid://88nkq2akw6tn" path="res://Objects/MutationObjs/fire_status.tscn" id="2_oqxuh"]
+
+[sub_resource type="Resource" id="Resource_7nx1v"]
+script = ExtResource("1_ug02f")
+spawn = ExtResource("2_oqxuh")
+pe = false
+m_name = "FireohSE"
+cat = "SE"
+metadata/_custom_type_script = "uid://b3p7ladumfplp"
+
+[resource]
+script = ExtResource("1_rltua")
+n_adder_mut = SubResource("Resource_7nx1v")
+m_name = "Scorching"
+desc = "Chance on hit to burn"
+cat = "Fire"
+metadata/_custom_type_script = "uid://bqwftu5frp121"

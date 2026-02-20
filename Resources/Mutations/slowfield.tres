@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="MOnKill" format=3 uid="uid://wx18acfk5hpo"]
+
+[ext_resource type="Script" uid="uid://b00ga813u2867" path="res://Mutations/onkill_spawner.gd" id="1_dfpcv"]
+[ext_resource type="PackedScene" uid="uid://cumhccys2fnux" path="res://Objects/MutationObjs/slowfield.tscn" id="2_dfpcv"]
+
+[resource]
+script = ExtResource("1_dfpcv")
+chance = 0.3
+c_per_stack = 0.05
+spawn = ExtResource("2_dfpcv")
+m_name = "Hailing"
+desc = "Chance on kill to create a slowing aura"
+cat = "Snow"
+metadata/_custom_type_script = "uid://b00ga813u2867"

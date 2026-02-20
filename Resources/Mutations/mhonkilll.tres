@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="MOnKill" format=3 uid="uid://5ldg88616ag6"]
+
+[ext_resource type="Script" uid="uid://b00ga813u2867" path="res://Mutations/onkill_spawner.gd" id="1_cau7l"]
+[ext_resource type="PackedScene" uid="uid://5rkdjupf8t3q" path="res://Objects/MutationObjs/mh_pickup.tscn" id="2_cau7l"]
+
+[resource]
+script = ExtResource("1_cau7l")
+chance = 0.2
+c_per_stack = 0.08
+spawn = ExtResource("2_cau7l")
+m_name = "Bulk Up"
+desc = "Chance on kill to drop a temporary max health boost"
+cat = "StatDrop"
+metadata/_custom_type_script = "uid://b00ga813u2867"

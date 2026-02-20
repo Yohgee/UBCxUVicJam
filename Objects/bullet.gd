@@ -10,6 +10,8 @@ var source : Entity
 var velocity : Vector2 = Vector2.ZERO
 var acceleration : Vector2 = Vector2.ZERO
 
+var yyby_src : bool = false
+
 func _ready() -> void:
 	if !area_entered.is_connected(on_hit):
 		area_entered.connect(on_hit)
@@ -24,6 +26,7 @@ func _process(delta: float) -> void:
 		queue_free()
 
 func on_hit(area : Area2D):
+	if yyby_src && area is not Enemy: return
 	if area is not Entity: return
 	area = area as Entity
 	if area == source: return

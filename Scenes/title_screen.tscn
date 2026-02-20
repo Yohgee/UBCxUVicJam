@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bn0ippdwegtfh" path="res://Scenes/title_screen.gd" id="1_klylv"]
 [ext_resource type="AudioStream" uid="uid://4kuamei77j12" path="res://Assets/1whistle.wav" id="2_p3fck"]
-[ext_resource type="AudioStream" uid="uid://s4m5tlnde4iu" path="res://Assets/mmsong.wav" id="3_4gxqj"]
+[ext_resource type="AudioStream" uid="uid://b2te40axd2oug" path="res://Assets/gamesong1_2026.mp3" id="3_4gxqj"]
 
 [sub_resource type="Gradient" id="Gradient_klylv"]
 offsets = PackedFloat32Array(0, 0.39156628, 0.9518072, 1)
@@ -142,3 +142,4 @@ volume_db = -11.86
 autoplay = true
 
 [connection signal="pressed" from="CanvasLayer/Control/Button" to="." method="_on_button_pressed"]
+[connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]

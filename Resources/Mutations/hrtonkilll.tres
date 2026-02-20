@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="MOnKill" format=3 uid="uid://b5tktmkcu3hrx"]
+
+[ext_resource type="Script" uid="uid://b00ga813u2867" path="res://Mutations/onkill_spawner.gd" id="1_xqfvp"]
+[ext_resource type="PackedScene" uid="uid://51a8dqddrpsk" path="res://Objects/MutationObjs/hrt_pickup.tscn" id="2_xqfvp"]
+
+[resource]
+script = ExtResource("1_xqfvp")
+chance = 0.4
+c_per_stack = 0.1
+spawn = ExtResource("2_xqfvp")
+m_name = "Regenerator"
+desc = "Chance on kill to drop a regen boost"
+cat = "StatDrop"
+metadata/_custom_type_script = "uid://b00ga813u2867"

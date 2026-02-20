@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="MNodeAdder" format=3 uid="uid://dm37x706kt7ha"]
+
+[ext_resource type="Script" uid="uid://b3p7ladumfplp" path="res://Mutations/node_adder.gd" id="1_x72mq"]
+[ext_resource type="PackedScene" uid="uid://b5h6n5bxe5fob" path="res://Objects/MutationObjs/helper.tscn" id="2_rinox"]
+
+[resource]
+script = ExtResource("1_x72mq")
+spawn = ExtResource("2_rinox")
+pe = false
+m_name = "Agile Aura"
+desc = "Increase the agility of nearby allies"
+cat = "Aura"
+metadata/_custom_type_script = "uid://b3p7ladumfplp"

@@ -18,7 +18,7 @@ func enter(e : Entity, os : State):
 	yyby_node.animation_player.play("walk")
 
 func main(delta : float):
-	yyby_node.position += wander_dir * Yyby.BASE_SPEED/2 * delta
+	yyby_node.position += wander_dir * Yyby.BASE_SPEED/2 * delta * yyby_node.agility
 	t -= delta
 	if t <= 0:
 		machine.change_state(ret_state)

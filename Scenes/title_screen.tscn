@@ -1,0 +1,144 @@
+[gd_scene format=3 uid="uid://ttcmw7qpjloa"]
+
+[ext_resource type="Script" uid="uid://bn0ippdwegtfh" path="res://Scenes/title_screen.gd" id="1_klylv"]
+[ext_resource type="AudioStream" uid="uid://4kuamei77j12" path="res://Assets/1whistle.wav" id="2_p3fck"]
+[ext_resource type="AudioStream" uid="uid://s4m5tlnde4iu" path="res://Assets/mmsong.wav" id="3_4gxqj"]
+
+[sub_resource type="Gradient" id="Gradient_klylv"]
+offsets = PackedFloat32Array(0, 0.39156628, 0.9518072, 1)
+colors = PackedColorArray(0, 0, 0, 1, 0.060240965, 0.060240965, 0.060240965, 1, 0.4138136, 0.4138136, 0.4138136, 1, 1, 1, 1, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_p3fck"]
+noise_type = 2
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_4gxqj"]
+width = 1000
+height = 600
+noise = SubResource("FastNoiseLite_p3fck")
+color_ramp = SubResource("Gradient_klylv")
+
+[sub_resource type="Animation" id="Animation_4gxqj"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/Control/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_twnyg"]
+resource_name = "fade"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/Control/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_55kwv"]
+_data = {
+&"RESET": SubResource("Animation_4gxqj"),
+&"fade": SubResource("Animation_twnyg")
+}
+
+[node name="Title Screen" type="Node2D" unique_id=1476145404]
+script = ExtResource("1_klylv")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1247836203]
+z_index = -2
+position = Vector2(466, 271)
+texture = SubResource("NoiseTexture2D_4gxqj")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=440527680]
+
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=199602745]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/Control" unique_id=504761636]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -178.0
+offset_top = 113.0
+offset_right = 178.0
+offset_bottom = 156.0
+grow_horizontal = 2
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 42
+text = "The Genome Collective"
+
+[node name="Label2" type="Label" parent="CanvasLayer/Control" unique_id=2050546904]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -178.0
+offset_top = -43.0
+offset_right = 178.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 16
+text = "Game by: Eli Flood. Music by: Matthew Ritonja"
+horizontal_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Control" unique_id=727057825]
+z_index = 2
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0)
+
+[node name="Button" type="Button" parent="CanvasLayer/Control" unique_id=987583064]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -19.5
+offset_top = -12.5
+offset_right = 19.5
+offset_bottom = 12.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 20
+text = "Start"
+flat = true
+
+[node name="start" type="AudioStreamPlayer" parent="." unique_id=2123060976]
+stream = ExtResource("2_p3fck")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=712450593]
+libraries/ = SubResource("AnimationLibrary_55kwv")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1132855642]
+stream = ExtResource("3_4gxqj")
+volume_db = -11.86
+autoplay = true
+
+[connection signal="pressed" from="CanvasLayer/Control/Button" to="." method="_on_button_pressed"]

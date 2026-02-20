@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="MTimedShooter" format=3 uid="uid://cwclbj13kwqcv"]
+
+[ext_resource type="PackedScene" uid="uid://c5edspy1hsxke" path="res://Objects/MutationObjs/snowball.tscn" id="1_vclr2"]
+[ext_resource type="Script" uid="uid://d16lma2dweuav" path="res://Mutations/timed_shooter.gd" id="2_cyo7b"]
+[ext_resource type="PackedScene" uid="uid://xyluuf2j7fbc" path="res://Objects/MutationObjs/TimedShooter.tscn" id="3_fut2l"]
+
+[resource]
+script = ExtResource("2_cyo7b")
+time = 2.0
+bullet_speed = 150.0
+bullet = ExtResource("1_vclr2")
+spawn = ExtResource("3_fut2l")
+m_name = "Snowball"
+desc = "Shoot a snowball every 2 seconds"
+cat = "Snow"
+metadata/_custom_type_script = "uid://d16lma2dweuav"

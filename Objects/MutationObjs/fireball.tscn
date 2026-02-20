@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://ck2nmydtofbf2"]
+
+[ext_resource type="Script" uid="uid://b2f5bk2571sqd" path="res://Objects/bullet.gd" id="1_kscoi"]
+[ext_resource type="Texture2D" uid="uid://bhjyudqanhglf" path="res://Assets/fireball.png" id="2_8tfwa"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_m484p"]
+
+[node name="Bullet" type="Area2D" unique_id=2093413857]
+collision_layer = 0
+collision_mask = 5
+script = ExtResource("1_kscoi")
+damage = 2.0
+rotate_to_vel = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1087502203]
+shape = SubResource("CircleShape2D_m484p")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=746732710]
+texture = ExtResource("2_8tfwa")
+
+[connection signal="area_entered" from="." to="." method="on_hit"]

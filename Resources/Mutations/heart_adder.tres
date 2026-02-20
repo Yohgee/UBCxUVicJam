@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="MStatAdder" format=3 uid="uid://dydu1s66lhiiv"]
+
+[ext_resource type="Script" uid="uid://rj6d4dun1ey1" path="res://Mutations/stat_adder.gd" id="1_cdpbi"]
+
+[resource]
+script = ExtResource("1_cdpbi")
+stat = "heart"
+amount = 0.2
+m_name = "Regeneration"
+desc = "Adds 0.2 regeneration"
+metadata/_custom_type_script = "uid://rj6d4dun1ey1"

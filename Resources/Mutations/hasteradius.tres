@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="MNodeAdder" format=3 uid="uid://cw55xdfgrdl3x"]
+
+[ext_resource type="Script" uid="uid://b3p7ladumfplp" path="res://Mutations/node_adder.gd" id="1_410xl"]
+[ext_resource type="PackedScene" uid="uid://b4uvrjihv32s3" path="res://Objects/MutationObjs/haste_helper.tscn" id="2_410xl"]
+
+[resource]
+script = ExtResource("1_410xl")
+spawn = ExtResource("2_410xl")
+pe = false
+m_name = "Hasty Aura"
+desc = "Increase the haste of nearby allies"
+cat = "Aura"
+metadata/_custom_type_script = "uid://b3p7ladumfplp"

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="MStatAdder" format=3 uid="uid://bwilf8ctvhnrk"]
+
+[ext_resource type="Script" uid="uid://rj6d4dun1ey1" path="res://Mutations/stat_adder.gd" id="1_6g2ng"]
+
+[resource]
+script = ExtResource("1_6g2ng")
+stat = "haste"
+amount = 0.2
+m_name = "Haste"
+desc = "Adds 0.2 haste"
+metadata/_custom_type_script = "uid://rj6d4dun1ey1"

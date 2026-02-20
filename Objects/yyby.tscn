@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://fxprutm25ida" path="res://Assets/exclamation.png" id="9_kcqd3"]
 [ext_resource type="Script" uid="uid://baygv8r8mdp0n" path="res://Objects/States/alert.gd" id="9_smlpp"]
 [ext_resource type="Script" uid="uid://dhga32e0gf6gl" path="res://Objects/States/follow.gd" id="10_0mgt5"]
+[ext_resource type="AudioStream" uid="uid://tdnflqbm5bn0" path="res://Assets/hitHurt.wav" id="12_op8gi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nr72b"]
 size = Vector2(29, 21)
@@ -187,6 +188,7 @@ _data = {
 }
 
 [node name="Yyby" type="Area2D" unique_id=1644953268]
+collision_layer = 3
 script = ExtResource("1_gr2r7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1688704971]
@@ -243,3 +245,12 @@ libraries/ = SubResource("AnimationLibrary_0mgt5")
 visible = false
 position = Vector2(0, -19)
 texture = ExtResource("9_kcqd3")
+
+[node name="Timer" type="Timer" parent="." unique_id=541826813]
+wait_time = 2.0
+autostart = true
+
+[node name="Damage" type="AudioStreamPlayer" parent="." unique_id=305791562]
+stream = ExtResource("12_op8gi")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="MStatAdder" format=3 uid="uid://cjmeh73kh66a5"]
+
+[ext_resource type="Script" uid="uid://rj6d4dun1ey1" path="res://Mutations/stat_adder.gd" id="1_ihew8"]
+
+[resource]
+script = ExtResource("1_ihew8")
+stat = "max_health"
+amount = 5
+m_name = "Constitution"
+desc = "Gain 5 max health"
+metadata/_custom_type_script = "uid://rj6d4dun1ey1"

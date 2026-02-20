@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://b4uvrjihv32s3"]
+
+[ext_resource type="Script" uid="uid://5jquryiugjba" path="res://Objects/MutationObjs/helper.gd" id="1_imvx8"]
+[ext_resource type="Texture2D" uid="uid://cdjamld7lysyw" path="res://Assets/helpercircle.png" id="2_fsvb2"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1pw18"]
+radius = 64.0
+
+[node name="Helper" type="Area2D" unique_id=1955965381]
+collision_layer = 0
+script = ExtResource("1_imvx8")
+stat = "haste"
+amount = 0.4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=159302206]
+shape = SubResource("CircleShape2D_1pw18")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=256548317]
+modulate = Color(0.43815202, 0.73281527, 1, 1)
+texture = ExtResource("2_fsvb2")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="area_exited" from="." to="." method="_on_area_exited"]

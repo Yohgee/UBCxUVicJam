@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="MStatAdder" format=3 uid="uid://ckj4gl2qyo6a1"]
+
+[ext_resource type="Script" uid="uid://rj6d4dun1ey1" path="res://Mutations/stat_adder.gd" id="1_ajt5e"]
+
+[resource]
+script = ExtResource("1_ajt5e")
+stat = "pierce"
+amount = 1
+m_name = "Piercing"
+desc = "Bullets pierce 1 extra target"
+metadata/_custom_type_script = "uid://rj6d4dun1ey1"

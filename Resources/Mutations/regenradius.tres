@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="MNodeAdder" format=3 uid="uid://c4ccox7rbi67c"]
+
+[ext_resource type="Script" uid="uid://b3p7ladumfplp" path="res://Mutations/node_adder.gd" id="1_ky3mq"]
+[ext_resource type="PackedScene" uid="uid://bsojvulpmn4mh" path="res://Objects/MutationObjs/regen_helper.tscn" id="2_ky3mq"]
+
+[resource]
+script = ExtResource("1_ky3mq")
+spawn = ExtResource("2_ky3mq")
+pe = false
+m_name = "Regenerating Aura"
+desc = "Increase the regeneration of nearby allies"
+cat = "Aura"
+metadata/_custom_type_script = "uid://b3p7ladumfplp"

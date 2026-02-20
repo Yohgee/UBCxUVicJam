@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://cepud3oyh5kow"]
+
+[ext_resource type="Texture2D" uid="uid://xgt41nvdro1l" path="res://Assets/flora.png" id="1_xr8ew"]
+[ext_resource type="Script" uid="uid://bd3bpbwmf3qe6" path="res://Objects/decal.gd" id="2_hmg8a"]
+
+[node name="Decal" type="Sprite2D" unique_id=1968911029]
+texture = ExtResource("1_xr8ew")
+hframes = 9
+script = ExtResource("2_hmg8a")

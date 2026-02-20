@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://chviax2kja5ha"]
+
+[ext_resource type="Texture2D" uid="uid://d0207475ip0u3" path="res://Assets/attackcircle.png" id="1_54gdd"]
+[ext_resource type="Script" uid="uid://8qnuv11phha8" path="res://Objects/attack_node.gd" id="1_ehnx0"]
+[ext_resource type="Texture2D" uid="uid://hrrtqtf802aw" path="res://Assets/attackcircle_fill.png" id="2_ehnx0"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2mlly"]
+radius = 32.0
+
+[node name="AttackNode" type="Node2D" unique_id=64432321]
+script = ExtResource("1_ehnx0")
+dmg = 2.0
+
+[node name="Area2D" type="Area2D" parent="." unique_id=911559917]
+modulate = Color(1, 1, 1, 0.5882353)
+position = Vector2(64, 0)
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1229104050]
+shape = SubResource("CircleShape2D_2mlly")
+disabled = true
+
+[node name="TimeSpr" type="Sprite2D" parent="Area2D" unique_id=1105594026]
+texture = ExtResource("2_ehnx0")
+
+[node name="OutlineSpr" type="Sprite2D" parent="Area2D" unique_id=220236087]
+texture = ExtResource("1_54gdd")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://dyw3r0hc8uyx0"]
+
+[ext_resource type="Script" uid="uid://dc6lgaaci6sb7" path="res://Scripts/enemy.gd" id="1_dnm5c"]
+[ext_resource type="Texture2D" uid="uid://bhigi5yvmlnri" path="res://Assets/enemy2.png" id="2_cqgh6"]
+[ext_resource type="Script" uid="uid://cilxe4wt2a67e" path="res://Scripts/StateMachine.gd" id="3_d3xos"]
+[ext_resource type="Script" uid="uid://boiysr4f8n8gi" path="res://Objects/States/chase.gd" id="4_yfe2k"]
+[ext_resource type="Script" uid="uid://ktx7v3ls3eoe" path="res://Objects/States/attack.gd" id="5_756aq"]
+[ext_resource type="PackedScene" uid="uid://chviax2kja5ha" path="res://Objects/attack_node.tscn" id="6_cqgh6"]
+[ext_resource type="AudioStream" uid="uid://tdnflqbm5bn0" path="res://Assets/hitHurt.wav" id="7_lc1h8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yfe2k"]
+size = Vector2(51, 37)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_cqgh6"]
+radius = 80.0
+
+[node name="Enemy" type="Area2D" unique_id=2006855398]
+collision_layer = 4
+collision_mask = 0
+script = ExtResource("1_dnm5c")
+max_health = 5.0
+metadata/_custom_type_script = "uid://ouhcooqay2wy"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=224674760]
+position = Vector2(0.5, 2.5)
+shape = SubResource("RectangleShape2D_yfe2k")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=715334940]
+texture = ExtResource("2_cqgh6")
+
+[node name="StateMachine" type="Node" parent="." unique_id=7381840]
+script = ExtResource("3_d3xos")
+metadata/_custom_type_script = "uid://cilxe4wt2a67e"
+
+[node name="Chase" type="Node" parent="StateMachine" unique_id=1766863862 node_paths=PackedStringArray("atk_state")]
+script = ExtResource("4_yfe2k")
+atk_state = NodePath("../Attack")
+
+[node name="Attack" type="Node" parent="StateMachine" unique_id=1905284974 node_paths=PackedStringArray("chase_state")]
+script = ExtResource("5_756aq")
+attack_node = ExtResource("6_cqgh6")
+chase_state = NodePath("../Chase")
+
+[node name="Retarget" type="Area2D" parent="." unique_id=878144991]
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Retarget" unique_id=690051212]
+shape = SubResource("CircleShape2D_cqgh6")
+
+[node name="Damage" type="AudioStreamPlayer" parent="." unique_id=1308436219]
+stream = ExtResource("7_lc1h8")
+
+[connection signal="area_entered" from="Retarget" to="StateMachine/Chase" method="_on_retarget_area_entered"]

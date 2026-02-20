@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="MTimedShooter" format=3 uid="uid://bl83tu3mgdfcp"]
+
+[ext_resource type="PackedScene" uid="uid://ck2nmydtofbf2" path="res://Objects/MutationObjs/fireball.tscn" id="1_s7sx0"]
+[ext_resource type="Script" uid="uid://d16lma2dweuav" path="res://Mutations/timed_shooter.gd" id="1_xm2qg"]
+[ext_resource type="PackedScene" uid="uid://xyluuf2j7fbc" path="res://Objects/MutationObjs/TimedShooter.tscn" id="3_f3y3t"]
+
+[resource]
+script = ExtResource("1_xm2qg")
+time = 2.0
+bullet_speed = 300.0
+bullet = ExtResource("1_s7sx0")
+spawn = ExtResource("3_f3y3t")
+m_name = "Auto Fireball"
+desc = "Shoot a fireball every 2 seconds"
+cat = "Fire"
+metadata/_custom_type_script = "uid://d16lma2dweuav"

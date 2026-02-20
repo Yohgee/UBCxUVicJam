@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="MNodeAdder" format=3 uid="uid://cj4g30ges4tkf"]
+
+[ext_resource type="Script" uid="uid://b3p7ladumfplp" path="res://Mutations/node_adder.gd" id="1_5wu2c"]
+[ext_resource type="PackedScene" uid="uid://8n88fr6hnlqd" path="res://Objects/MutationObjs/str_helper.tscn" id="2_5wu2c"]
+
+[resource]
+script = ExtResource("1_5wu2c")
+spawn = ExtResource("2_5wu2c")
+pe = false
+m_name = "Strength Aura"
+desc = "Increase the strength of nearby allies"
+cat = "Aura"
+metadata/_custom_type_script = "uid://b3p7ladumfplp"

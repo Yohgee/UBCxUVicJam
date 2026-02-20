@@ -22,7 +22,7 @@ func enter(e : Entity, _os : State):
 func main(delta : float):
 	follow_dir = rand_fp - yyby_node.global_position
 	follow_dir = follow_dir.normalized()
-	yyby_node.position += follow_dir * Yyby.BASE_SPEED * delta
+	yyby_node.position += follow_dir * Yyby.BASE_SPEED * delta * yyby_node.agility
 	if yyby_node.global_position.distance_to(rand_fp) < 8: 
 		machine.change_state(ret_state)
 	t -= delta

@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://c8fc8larsr36y"]
+
+[ext_resource type="AudioStream" uid="uid://di31qsp3c6kbv" path="res://Assets/explosion (2).wav" id="1_ad0j1"]
+[ext_resource type="Script" uid="uid://sqy82cbiqbvo" path="res://Objects/death_sound.gd" id="2_2r4ge"]
+
+[node name="DeathSound" type="AudioStreamPlayer" unique_id=51247011]
+stream = ExtResource("1_ad0j1")
+autoplay = true
+script = ExtResource("2_2r4ge")
+
+[connection signal="finished" from="." to="." method="_on_finished"]

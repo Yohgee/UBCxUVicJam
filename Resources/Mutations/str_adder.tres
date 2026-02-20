@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="MStatAdder" format=3 uid="uid://ctdqur3psiaej"]
+
+[ext_resource type="Script" uid="uid://rj6d4dun1ey1" path="res://Mutations/stat_adder.gd" id="1_0dce2"]
+
+[resource]
+script = ExtResource("1_0dce2")
+stat = "strength"
+amount = 1
+m_name = "Strength"
+desc = "Adds 1 strength"
+metadata/_custom_type_script = "uid://rj6d4dun1ey1"

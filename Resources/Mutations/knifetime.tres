@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="MTimedShooter" format=3 uid="uid://jj2tbdsxqbtp"]
+
+[ext_resource type="PackedScene" uid="uid://cgwuuisu1fcgp" path="res://Objects/MutationObjs/knife.tscn" id="1_vpsly"]
+[ext_resource type="Script" uid="uid://d16lma2dweuav" path="res://Mutations/timed_shooter.gd" id="2_m5fgx"]
+[ext_resource type="PackedScene" uid="uid://xyluuf2j7fbc" path="res://Objects/MutationObjs/TimedShooter.tscn" id="3_4dpgk"]
+
+[resource]
+script = ExtResource("2_m5fgx")
+time = 1.5
+bullet_speed = 450.0
+bullet = ExtResource("1_vpsly")
+spawn = ExtResource("3_4dpgk")
+m_name = "Knife"
+desc = "Shoot a knife every 1.5 seconds"
+cat = "Knife"
+metadata/_custom_type_script = "uid://d16lma2dweuav"

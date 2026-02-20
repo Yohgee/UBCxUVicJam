@@ -3,6 +3,13 @@
 [ext_resource type="Script" uid="uid://qinf8musr65g" path="res://Objects/player.gd" id="1_3y5cq"]
 [ext_resource type="Texture2D" uid="uid://v227gtoimik5" path="res://Assets/player.png" id="1_y0qk3"]
 [ext_resource type="Texture2D" uid="uid://bv4n6de6wnohk" path="res://Assets/cursor_thing.png" id="3_2i4gt"]
+[ext_resource type="AudioStream" uid="uid://bo53hv0n5wa4l" path="res://Assets/shoot.wav" id="4_0ad8t"]
+[ext_resource type="AudioStream" uid="uid://tdnflqbm5bn0" path="res://Assets/hitHurt.wav" id="5_x20fu"]
+[ext_resource type="AudioStream" uid="uid://4kuamei77j12" path="res://Assets/1whistle.wav" id="6_0ar0x"]
+
+[sub_resource type="Gradient" id="Gradient_2i4gt"]
+offsets = PackedFloat32Array(0.17816092, 0.43103448, 0.6091954, 0.7758621)
+colors = PackedColorArray(0.33331102, 5.5952e-07, 1.2032687e-07, 1, 0.7631638, 0.5241757, 0, 1, 0.8507775, 0.8060891, 0.066931814, 1, 1, 1, 1, 1)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3y5cq"]
 size = Vector2(18, 32)
@@ -16,16 +23,21 @@ radius = 128.0
 [node name="Player" type="Area2D" unique_id=416086468]
 z_index = 2
 script = ExtResource("1_3y5cq")
+cramp = SubResource("Gradient_2i4gt")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=836167989]
 position = Vector2(-1, 1)
 shape = SubResource("RectangleShape2D_3y5cq")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=309923514]
+[node name="MainSpr" type="Sprite2D" parent="." unique_id=309923514]
 position = Vector2(0, -6)
 texture = ExtResource("1_y0qk3")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=582715390]
+limit_left = -1820
+limit_top = -1080
+limit_right = 1820
+limit_bottom = 1080
 
 [node name="Cursor_Spr" type="Sprite2D" parent="." unique_id=1939440475]
 position = Vector2(0, -6)
@@ -35,16 +47,43 @@ texture = ExtResource("3_2i4gt")
 position = Vector2(-64, 0)
 
 [node name="CloseCall" type="Area2D" parent="." unique_id=812013165]
+collision_layer = 0
+collision_mask = 2
 
 [node name="CloseCallColl" type="CollisionShape2D" parent="CloseCall" unique_id=892043388]
 shape = SubResource("CircleShape2D_2i4gt")
 disabled = true
 
 [node name="PointCall" type="Area2D" parent="." unique_id=152641702]
+collision_layer = 0
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PointCall" unique_id=2015627540]
 shape = SubResource("CircleShape2D_0ad8t")
 disabled = true
 
+[node name="Timer" type="Timer" parent="." unique_id=459782674]
+wait_time = 2.0
+autostart = true
+
+[node name="Shoot" type="AudioStreamPlayer" parent="." unique_id=965373270]
+stream = ExtResource("4_0ad8t")
+volume_db = -9.123
+
+[node name="Damage" type="AudioStreamPlayer" parent="." unique_id=548491638]
+stream = ExtResource("5_x20fu")
+
+[node name="Label" type="Label" parent="." unique_id=396861762]
+offset_left = -20.0
+offset_top = 29.0
+offset_right = 20.0
+offset_bottom = 46.0
+
+[node name="tweet" type="AudioStreamPlayer" parent="." unique_id=1342023813]
+stream = ExtResource("6_0ar0x")
+volume_db = -6.386
+
 [connection signal="area_entered" from="CloseCall" to="." method="_on_close_call_area_entered"]
 [connection signal="area_entered" from="PointCall" to="." method="_on_close_call_area_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="finished" from="tweet" to="." method="_on_tweet_finished"]

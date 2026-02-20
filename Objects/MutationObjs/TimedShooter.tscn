@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://xyluuf2j7fbc"]
+
+[ext_resource type="Script" uid="uid://cbfsqk3y1c33o" path="res://Objects/MutationObjs/timed_shooter.gd" id="1_l1105"]
+
+[node name="Timer" type="Timer" unique_id=1892139201]
+script = ExtResource("1_l1105")

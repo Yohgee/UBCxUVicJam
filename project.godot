@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="UBCxUVicJam"
-run/main_scene="uid://0th32u4kjvso"
+run/main_scene="uid://ttcmw7qpjloa"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+MutationLoader="*uid://cjw26huwxtgor"
 
 [display]
 

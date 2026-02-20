@@ -103,10 +103,12 @@ func _on_p_2l_pressed() -> void:
 
 
 func _on_p_1c_pressed() -> void:
+	if !active: return
 	edit_p1 = true
 	grid.show()
 
 
 func _on_p_2c_pressed() -> void:
+	if !active: return
 	edit_p1 = false
 	grid.show()

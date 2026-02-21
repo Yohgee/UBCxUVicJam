@@ -5,8 +5,18 @@ const YYBY = preload("uid://bpwebcfrb068b")
 var guys : Array[YybyNode]
 @onready var start: AudioStreamPlayer = $start
 
+@export var all_muts : Array[Mutation]
+var cat_muts : Dictionary
+
 func _ready() -> void:
-	for c in MutationLoader.cat_muts.keys():
+	if true:
+		for m in all_muts:
+			if cat_muts.has(m.cat):
+				cat_muts.get(m.cat).append(m)
+			else:
+				cat_muts.set(m.cat, [])
+				cat_muts.get(m.cat).append(m)
+	for c in cat_muts.keys():
 		var ny : YybyNode = YYBY.instantiate()
 		var nr = Yyby.new()
 		var m : Mutation = MutationLoader.get_random_mutation(c)

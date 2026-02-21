@@ -40,7 +40,7 @@ func die():
 	get_tree().call_deferred("change_scene_to_file", "res://Scenes/title_screen.tscn")
 
 @onready var label: Label = $Label
-var debug : bool = true
+var debug : bool = false
 
 func _physics_process(delta: float) -> void:
 	if dead: return

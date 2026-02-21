@@ -1,0 +1,305 @@
+[gd_resource type="Resource" script_class="SavedMuts" format=3 uid="uid://cvdx8exied0q0"]
+
+[ext_resource type="Script" uid="uid://cyxiud2eru513" path="res://Scripts/mutation.gd" id="1_k5dhd"]
+[ext_resource type="Script" uid="uid://b00ga813u2867" path="res://Mutations/onkill_spawner.gd" id="2_okej2"]
+[ext_resource type="PackedScene" uid="uid://b02ywhq3bgwkf" path="res://Objects/MutationObjs/stat_pickup.tscn" id="3_h6rsi"]
+[ext_resource type="Script" uid="uid://b3p7ladumfplp" path="res://Mutations/node_adder.gd" id="4_708if"]
+[ext_resource type="PackedScene" uid="uid://b5h6n5bxe5fob" path="res://Objects/MutationObjs/helper.tscn" id="5_0lr7r"]
+[ext_resource type="Script" uid="uid://rj6d4dun1ey1" path="res://Mutations/stat_adder.gd" id="6_lfqr2"]
+[ext_resource type="PackedScene" uid="uid://dxb4otnt3mqik" path="res://Objects/MutationObjs/blood_aura.tscn" id="7_g3mns"]
+[ext_resource type="Resource" uid="uid://b7w6rstpgpmkd" path="res://Objects/MutationObjs/bloodadder.tres" id="8_p2mvw"]
+[ext_resource type="Script" uid="uid://bqwftu5frp121" path="res://Mutations/onhit_adder.gd" id="9_q6rkd"]
+[ext_resource type="PackedScene" uid="uid://fewkat6f3lhv" path="res://Objects/MutationObjs/explosion.tscn" id="10_dol46"]
+[ext_resource type="PackedScene" uid="uid://ck2nmydtofbf2" path="res://Objects/MutationObjs/fireball.tscn" id="11_uyrvj"]
+[ext_resource type="Script" uid="uid://d16lma2dweuav" path="res://Mutations/timed_shooter.gd" id="12_qbc14"]
+[ext_resource type="PackedScene" uid="uid://xyluuf2j7fbc" path="res://Objects/MutationObjs/TimedShooter.tscn" id="13_mjns0"]
+[ext_resource type="PackedScene" uid="uid://88nkq2akw6tn" path="res://Objects/MutationObjs/fire_status.tscn" id="14_0gf45"]
+[ext_resource type="PackedScene" uid="uid://dhohkmv5bnb33" path="res://Objects/MutationObjs/haste_pickup.tscn" id="15_bejpd"]
+[ext_resource type="PackedScene" uid="uid://b4uvrjihv32s3" path="res://Objects/MutationObjs/haste_helper.tscn" id="16_s26xe"]
+[ext_resource type="PackedScene" uid="uid://51a8dqddrpsk" path="res://Objects/MutationObjs/hrt_pickup.tscn" id="17_ypqte"]
+[ext_resource type="PackedScene" uid="uid://badsrr2vt5ibt" path="res://Objects/MutationObjs/slow_status.tscn" id="18_8wk7v"]
+[ext_resource type="PackedScene" uid="uid://cgwuuisu1fcgp" path="res://Objects/MutationObjs/knife.tscn" id="19_5cut2"]
+[ext_resource type="PackedScene" uid="uid://5rkdjupf8t3q" path="res://Objects/MutationObjs/mh_pickup.tscn" id="20_f74o8"]
+[ext_resource type="PackedScene" uid="uid://bsojvulpmn4mh" path="res://Objects/MutationObjs/regen_helper.tscn" id="21_vmosb"]
+[ext_resource type="PackedScene" uid="uid://cumhccys2fnux" path="res://Objects/MutationObjs/slowfield.tscn" id="22_shr8i"]
+[ext_resource type="PackedScene" uid="uid://c5edspy1hsxke" path="res://Objects/MutationObjs/snowball.tscn" id="23_mu4r8"]
+[ext_resource type="PackedScene" uid="uid://dpseuddrl3dtg" path="res://Objects/MutationObjs/str_pickup.tscn" id="24_ped3n"]
+[ext_resource type="PackedScene" uid="uid://8n88fr6hnlqd" path="res://Objects/MutationObjs/str_helper.tscn" id="25_6job8"]
+[ext_resource type="Resource" uid="uid://hqyv68h1c5u7" path="res://Resources/Mutations/agionkilll.tres" id="26_1l1l7"]
+[ext_resource type="Resource" uid="uid://fuibv03oexg2" path="res://Resources/Mutations/hasteonk.tres" id="27_o278v"]
+[ext_resource type="Resource" uid="uid://b5tktmkcu3hrx" path="res://Resources/Mutations/hrtonkilll.tres" id="28_7m2hb"]
+[ext_resource type="Resource" uid="uid://5ldg88616ag6" path="res://Resources/Mutations/mhonkilll.tres" id="29_0307m"]
+[ext_resource type="Resource" uid="uid://6tyno8f6a08" path="res://Resources/Mutations/stronkilll.tres" id="30_3x06w"]
+[ext_resource type="Resource" uid="uid://dm37x706kt7ha" path="res://Resources/Mutations/agiradius.tres" id="31_tcngo"]
+[ext_resource type="Resource" uid="uid://cw55xdfgrdl3x" path="res://Resources/Mutations/hasteradius.tres" id="32_x2uyw"]
+[ext_resource type="Resource" uid="uid://c4ccox7rbi67c" path="res://Resources/Mutations/regenradius.tres" id="33_avo8f"]
+[ext_resource type="Resource" uid="uid://cj4g30ges4tkf" path="res://Resources/Mutations/strradius.tres" id="34_nu1im"]
+[ext_resource type="Resource" uid="uid://cbe73geot7w3d" path="res://Resources/Mutations/agi_adder.tres" id="35_thd0m"]
+[ext_resource type="Resource" uid="uid://bwilf8ctvhnrk" path="res://Resources/Mutations/haste_adder.tres" id="36_sw3sm"]
+[ext_resource type="Resource" uid="uid://dydu1s66lhiiv" path="res://Resources/Mutations/heart_adder.tres" id="37_2qtkm"]
+[ext_resource type="Resource" uid="uid://cjmeh73kh66a5" path="res://Resources/Mutations/mhp_adder.tres" id="38_br47r"]
+[ext_resource type="Resource" uid="uid://ckj4gl2qyo6a1" path="res://Resources/Mutations/pierce_add.tres" id="39_kd458"]
+[ext_resource type="Resource" uid="uid://ctdqur3psiaej" path="res://Resources/Mutations/str_adder.tres" id="40_epdpf"]
+[ext_resource type="Resource" uid="uid://8ffwt3a6gh0o" path="res://Resources/Mutations/bleedaura.tres" id="41_va02o"]
+[ext_resource type="Resource" uid="uid://bghfps77035pa" path="res://Resources/Mutations/bleedoh.tres" id="42_7a31w"]
+[ext_resource type="Resource" uid="uid://jj2tbdsxqbtp" path="res://Resources/Mutations/knifetime.tres" id="43_gvb0f"]
+[ext_resource type="Resource" uid="uid://cer4q52khkx03" path="res://Resources/Mutations/explo.tres" id="44_wlp46"]
+[ext_resource type="Resource" uid="uid://bl83tu3mgdfcp" path="res://Resources/Mutations/fireballtime.tres" id="45_10ul2"]
+[ext_resource type="Resource" uid="uid://cf3kfc4hojdv3" path="res://Resources/Mutations/fireoh.tres" id="46_xhyyv"]
+[ext_resource type="Resource" uid="uid://cy0enfmhuqksn" path="res://Resources/Mutations/iceoh.tres" id="47_goefi"]
+[ext_resource type="Resource" uid="uid://wx18acfk5hpo" path="res://Resources/Mutations/slowfield.tres" id="48_1l4vm"]
+[ext_resource type="Resource" uid="uid://cwclbj13kwqcv" path="res://Resources/Mutations/snowtime.tres" id="49_3nhf6"]
+[ext_resource type="Script" uid="uid://tvmibg6vjkeb" path="res://Scripts/SavedMuts.gd" id="50_egruw"]
+
+[sub_resource type="Resource" id="Resource_46rh3"]
+script = ExtResource("2_okej2")
+chance = 0.4
+c_per_stack = 0.08
+spawn = ExtResource("3_h6rsi")
+m_name = "Agility Scavenger"
+desc = "Chance on kill to drop an agility boost"
+cat = "StatDrop"
+metadata/_custom_type_script = "uid://b00ga813u2867"
+
+[sub_resource type="Resource" id="Resource_o7n7r"]
+script = ExtResource("4_708if")
+spawn = ExtResource("5_0lr7r")
+pe = false
+m_name = "Agile Aura"
+desc = "Increase the agility of nearby allies"
+cat = "Aura"
+metadata/_custom_type_script = "uid://b3p7ladumfplp"
+
+[sub_resource type="Resource" id="Resource_hukhb"]
+script = ExtResource("6_lfqr2")
+stat = "agility"
+amount = 0.1
+m_name = "Agility"
+desc = "Adds 0.1 agility"
+metadata/_custom_type_script = "uid://rj6d4dun1ey1"
+
+[sub_resource type="Resource" id="Resource_2yurn"]
+script = ExtResource("2_okej2")
+chance = 0.15
+spawn = ExtResource("7_g3mns")
+m_name = "Blood Aura"
+desc = "Chance on kill to create a bleeding aura"
+cat = "Knife"
+metadata/_custom_type_script = "uid://b00ga813u2867"
+
+[sub_resource type="Resource" id="Resource_13pso"]
+script = ExtResource("9_q6rkd")
+n_adder_mut = ExtResource("8_p2mvw")
+chance = 1.0
+m_name = "Hemorrhaging"
+desc = "Chance on hit to bleed"
+cat = "Knife"
+metadata/_custom_type_script = "uid://bqwftu5frp121"
+
+[sub_resource type="Resource" id="Resource_huwsj"]
+script = ExtResource("2_okej2")
+chance = 0.2
+spawn = ExtResource("10_dol46")
+m_name = "Exploding"
+desc = "Chance on kill to explode"
+cat = "Fire"
+metadata/_custom_type_script = "uid://b00ga813u2867"
+
+[sub_resource type="Resource" id="Resource_dc86f"]
+script = ExtResource("12_qbc14")
+time = 2.0
+bullet_speed = 300.0
+bullet = ExtResource("11_uyrvj")
+spawn = ExtResource("13_mjns0")
+pe = false
+m_name = "Fireball"
+desc = "Shoot a fireball every 2 seconds"
+cat = "Fire"
+metadata/_custom_type_script = "uid://d16lma2dweuav"
+
+[sub_resource type="Resource" id="Resource_7nx1v"]
+script = ExtResource("4_708if")
+spawn = ExtResource("14_0gf45")
+pe = false
+m_name = "FireohSE"
+cat = "SE"
+metadata/_custom_type_script = "uid://b3p7ladumfplp"
+
+[sub_resource type="Resource" id="Resource_5yrf4"]
+script = ExtResource("9_q6rkd")
+n_adder_mut = SubResource("Resource_7nx1v")
+m_name = "Scorching"
+desc = "Chance on hit to burn"
+cat = "Fire"
+metadata/_custom_type_script = "uid://bqwftu5frp121"
+
+[sub_resource type="Resource" id="Resource_dvnbj"]
+script = ExtResource("2_okej2")
+chance = 0.3
+c_per_stack = 0.08
+spawn = ExtResource("15_bejpd")
+m_name = "Haste Scavenger"
+desc = "Chance on kill to drop a haste boost"
+cat = "StatDrop"
+metadata/_custom_type_script = "uid://b00ga813u2867"
+
+[sub_resource type="Resource" id="Resource_kwudo"]
+script = ExtResource("4_708if")
+spawn = ExtResource("16_s26xe")
+pe = false
+m_name = "Hasty Aura"
+desc = "Increase the haste of nearby allies"
+cat = "Aura"
+metadata/_custom_type_script = "uid://b3p7ladumfplp"
+
+[sub_resource type="Resource" id="Resource_bl7rp"]
+script = ExtResource("6_lfqr2")
+stat = "haste"
+amount = 0.2
+m_name = "Haste"
+desc = "Adds 0.2 haste"
+metadata/_custom_type_script = "uid://rj6d4dun1ey1"
+
+[sub_resource type="Resource" id="Resource_cx325"]
+script = ExtResource("6_lfqr2")
+stat = "heart"
+amount = 0.2
+m_name = "Regeneration"
+desc = "Adds 0.2 regeneration"
+metadata/_custom_type_script = "uid://rj6d4dun1ey1"
+
+[sub_resource type="Resource" id="Resource_cvcul"]
+script = ExtResource("2_okej2")
+chance = 0.4
+c_per_stack = 0.1
+spawn = ExtResource("17_ypqte")
+m_name = "Regenerator"
+desc = "Chance on kill to drop a regen boost"
+cat = "StatDrop"
+metadata/_custom_type_script = "uid://b00ga813u2867"
+
+[sub_resource type="Resource" id="Resource_bmffh"]
+script = ExtResource("4_708if")
+spawn = ExtResource("18_8wk7v")
+pe = false
+m_name = "SlowSE"
+cat = "SE"
+metadata/_custom_type_script = "uid://b3p7ladumfplp"
+
+[sub_resource type="Resource" id="Resource_fy5cx"]
+script = ExtResource("9_q6rkd")
+n_adder_mut = SubResource("Resource_bmffh")
+chance = 0.2
+c_per_stack = 0.05
+m_name = "Freezing"
+desc = "Chance on hit to slow"
+cat = "Snow"
+metadata/_custom_type_script = "uid://bqwftu5frp121"
+
+[sub_resource type="Resource" id="Resource_hwddq"]
+script = ExtResource("12_qbc14")
+time = 1.5
+bullet_speed = 450.0
+bullet = ExtResource("19_5cut2")
+spawn = ExtResource("13_mjns0")
+pe = false
+m_name = "Knife"
+desc = "Shoot a knife every 1.5 seconds"
+cat = "Knife"
+metadata/_custom_type_script = "uid://d16lma2dweuav"
+
+[sub_resource type="Resource" id="Resource_8fr52"]
+script = ExtResource("2_okej2")
+chance = 0.2
+c_per_stack = 0.08
+spawn = ExtResource("20_f74o8")
+m_name = "Bulk Up"
+desc = "Chance on kill to drop a temporary max health boost"
+cat = "StatDrop"
+metadata/_custom_type_script = "uid://b00ga813u2867"
+
+[sub_resource type="Resource" id="Resource_3n4t3"]
+script = ExtResource("6_lfqr2")
+stat = "max_health"
+amount = 5
+m_name = "Constitution"
+desc = "Gain 5 max health"
+metadata/_custom_type_script = "uid://rj6d4dun1ey1"
+
+[sub_resource type="Resource" id="Resource_xjcf7"]
+script = ExtResource("6_lfqr2")
+stat = "pierce"
+amount = 1
+m_name = "Piercing"
+desc = "Bullets pierce 1 extra target"
+metadata/_custom_type_script = "uid://rj6d4dun1ey1"
+
+[sub_resource type="Resource" id="Resource_14hk1"]
+script = ExtResource("4_708if")
+spawn = ExtResource("21_vmosb")
+pe = false
+m_name = "Regenerating Aura"
+desc = "Increase the regeneration of nearby allies"
+cat = "Aura"
+metadata/_custom_type_script = "uid://b3p7ladumfplp"
+
+[sub_resource type="Resource" id="Resource_qbkum"]
+script = ExtResource("2_okej2")
+chance = 0.3
+c_per_stack = 0.05
+spawn = ExtResource("22_shr8i")
+m_name = "Hailing"
+desc = "Chance on kill to create a slowing aura"
+cat = "Snow"
+metadata/_custom_type_script = "uid://b00ga813u2867"
+
+[sub_resource type="Resource" id="Resource_qeqg8"]
+script = ExtResource("12_qbc14")
+time = 2.0
+bullet_speed = 150.0
+bullet = ExtResource("23_mu4r8")
+spawn = ExtResource("13_mjns0")
+pe = false
+m_name = "Snowball"
+desc = "Shoot a snowball every 2 seconds"
+cat = "Snow"
+metadata/_custom_type_script = "uid://d16lma2dweuav"
+
+[sub_resource type="Resource" id="Resource_i3yxl"]
+script = ExtResource("2_okej2")
+chance = 0.3
+c_per_stack = 0.08
+spawn = ExtResource("24_ped3n")
+m_name = "Bloodlust"
+desc = "Chance on kill to drop a strength boost"
+cat = "StatDrop"
+metadata/_custom_type_script = "uid://b00ga813u2867"
+
+[sub_resource type="Resource" id="Resource_jwdwy"]
+script = ExtResource("4_708if")
+spawn = ExtResource("25_6job8")
+pe = false
+m_name = "Strength Aura"
+desc = "Increase the strength of nearby allies"
+cat = "Aura"
+metadata/_custom_type_script = "uid://b3p7ladumfplp"
+
+[sub_resource type="Resource" id="Resource_iyq8g"]
+script = ExtResource("6_lfqr2")
+stat = "strength"
+amount = 1
+m_name = "Strength"
+desc = "Adds 1 strength"
+metadata/_custom_type_script = "uid://rj6d4dun1ey1"
+
+[resource]
+script = ExtResource("50_egruw")
+all_muts = Array[ExtResource("1_k5dhd")]([SubResource("Resource_46rh3"), SubResource("Resource_o7n7r"), SubResource("Resource_hukhb"), SubResource("Resource_2yurn"), SubResource("Resource_13pso"), SubResource("Resource_huwsj"), SubResource("Resource_dc86f"), SubResource("Resource_5yrf4"), SubResource("Resource_dvnbj"), SubResource("Resource_kwudo"), SubResource("Resource_bl7rp"), SubResource("Resource_cx325"), SubResource("Resource_cvcul"), SubResource("Resource_fy5cx"), SubResource("Resource_hwddq"), SubResource("Resource_8fr52"), SubResource("Resource_3n4t3"), SubResource("Resource_xjcf7"), SubResource("Resource_14hk1"), SubResource("Resource_qbkum"), SubResource("Resource_qeqg8"), SubResource("Resource_i3yxl"), SubResource("Resource_jwdwy"), SubResource("Resource_iyq8g")])
+cat_muts = {
+"Aura": [ExtResource("31_tcngo"), ExtResource("32_x2uyw"), ExtResource("33_avo8f"), ExtResource("34_nu1im")],
+"Fire": [ExtResource("44_wlp46"), ExtResource("45_10ul2"), ExtResource("46_xhyyv")],
+"Knife": [ExtResource("41_va02o"), ExtResource("42_7a31w"), ExtResource("43_gvb0f")],
+"Snow": [ExtResource("47_goefi"), ExtResource("48_1l4vm"), ExtResource("49_3nhf6")],
+"Stat": [ExtResource("35_thd0m"), ExtResource("36_sw3sm"), ExtResource("37_2qtkm"), ExtResource("38_br47r"), ExtResource("39_kd458"), ExtResource("40_epdpf")],
+"StatDrop": [ExtResource("26_1l1l7"), ExtResource("27_o278v"), ExtResource("28_7m2hb"), ExtResource("29_0307m"), ExtResource("30_3x06w")]
+}

@@ -26,7 +26,19 @@ var enemy_muts : Array[Mutation] = []
 
 var dead_queue : Array[Yyby] = []
 
+@export var all_muts : Array[Mutation]
+var cat_muts : Dictionary
+
 func _ready() -> void:
+	if true:
+		for m in all_muts:
+			if cat_muts.has(m.cat):
+				cat_muts.get(m.cat).append(m)
+			else:
+				cat_muts.set(m.cat, [])
+				cat_muts.get(m.cat).append(m)
+	print(all_muts)
+	print(cat_muts)
 	for i in randi_range(64,128):
 		var decal : Sprite2D = DECAL.instantiate()
 		bg_spr.add_child(decal)
@@ -35,7 +47,7 @@ func _ready() -> void:
 	for i in 2:
 		var ny : YybyNode = YYBY.instantiate()
 		var nr = Yyby.new()
-		var m : Mutation = MutationLoader.all_muts.pick_random()
+		var m : Mutation = all_muts.pick_random()
 		nr.mutations.append(m)
 		player.get_mutation(m)
 		nr.y_name = Yyby.generate_name()

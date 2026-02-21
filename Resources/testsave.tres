@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="SavedMuts" format=3 uid="uid://be8glqnkl2d4y"]
+
+[ext_resource type="Script" uid="uid://cyxiud2eru513" path="res://Scripts/mutation.gd" id="1_3fg22"]
+[ext_resource type="Script" uid="uid://tvmibg6vjkeb" path="res://Scripts/SavedMuts.gd" id="1_d2o37"]
+
+[resource]
+script = ExtResource("1_d2o37")
+metadata/_custom_type_script = "uid://tvmibg6vjkeb"

@@ -13,6 +13,8 @@ const BASE_SPEED = 100
 @export var y_name : String = "eegee"
 @export var title : String = ""
 
+@export var web_test : Array[Mutation]
+
 var n_haste : float = 1.0
 var n_agi : float = 1.0
 var max_hp_buff : int = 0

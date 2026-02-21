@@ -1,8 +1,33 @@
 [gd_scene format=3 uid="uid://ttcmw7qpjloa"]
 
 [ext_resource type="Script" uid="uid://bn0ippdwegtfh" path="res://Scenes/title_screen.gd" id="1_klylv"]
+[ext_resource type="Script" uid="uid://cyxiud2eru513" path="res://Scripts/mutation.gd" id="2_ne8fx"]
 [ext_resource type="AudioStream" uid="uid://4kuamei77j12" path="res://Assets/1whistle.wav" id="2_p3fck"]
+[ext_resource type="Resource" uid="uid://hqyv68h1c5u7" path="res://Resources/Mutations/agionkilll.tres" id="3_1sbh8"]
 [ext_resource type="AudioStream" uid="uid://b2te40axd2oug" path="res://Assets/gamesong1_2026.mp3" id="3_4gxqj"]
+[ext_resource type="Resource" uid="uid://dm37x706kt7ha" path="res://Resources/Mutations/agiradius.tres" id="4_sjffk"]
+[ext_resource type="Resource" uid="uid://cbe73geot7w3d" path="res://Resources/Mutations/agi_adder.tres" id="5_v1jwd"]
+[ext_resource type="Resource" uid="uid://8ffwt3a6gh0o" path="res://Resources/Mutations/bleedaura.tres" id="6_hgo8u"]
+[ext_resource type="Resource" uid="uid://bghfps77035pa" path="res://Resources/Mutations/bleedoh.tres" id="7_h6bk8"]
+[ext_resource type="Resource" uid="uid://cer4q52khkx03" path="res://Resources/Mutations/explo.tres" id="8_wp86v"]
+[ext_resource type="Resource" uid="uid://bl83tu3mgdfcp" path="res://Resources/Mutations/fireballtime.tres" id="9_wqg3q"]
+[ext_resource type="Resource" uid="uid://cf3kfc4hojdv3" path="res://Resources/Mutations/fireoh.tres" id="10_e3ik3"]
+[ext_resource type="Resource" uid="uid://fuibv03oexg2" path="res://Resources/Mutations/hasteonk.tres" id="11_h5cty"]
+[ext_resource type="Resource" uid="uid://cw55xdfgrdl3x" path="res://Resources/Mutations/hasteradius.tres" id="12_wsud6"]
+[ext_resource type="Resource" uid="uid://bwilf8ctvhnrk" path="res://Resources/Mutations/haste_adder.tres" id="13_gf25o"]
+[ext_resource type="Resource" uid="uid://dydu1s66lhiiv" path="res://Resources/Mutations/heart_adder.tres" id="14_4ko3s"]
+[ext_resource type="Resource" uid="uid://b5tktmkcu3hrx" path="res://Resources/Mutations/hrtonkilll.tres" id="15_5sgjo"]
+[ext_resource type="Resource" uid="uid://cy0enfmhuqksn" path="res://Resources/Mutations/iceoh.tres" id="16_t1jex"]
+[ext_resource type="Resource" uid="uid://jj2tbdsxqbtp" path="res://Resources/Mutations/knifetime.tres" id="17_g3iaf"]
+[ext_resource type="Resource" uid="uid://5ldg88616ag6" path="res://Resources/Mutations/mhonkilll.tres" id="18_qfn48"]
+[ext_resource type="Resource" uid="uid://cjmeh73kh66a5" path="res://Resources/Mutations/mhp_adder.tres" id="19_vfwvj"]
+[ext_resource type="Resource" uid="uid://ckj4gl2qyo6a1" path="res://Resources/Mutations/pierce_add.tres" id="20_tv3xl"]
+[ext_resource type="Resource" uid="uid://c4ccox7rbi67c" path="res://Resources/Mutations/regenradius.tres" id="21_4lfus"]
+[ext_resource type="Resource" uid="uid://wx18acfk5hpo" path="res://Resources/Mutations/slowfield.tres" id="22_ur6tn"]
+[ext_resource type="Resource" uid="uid://cwclbj13kwqcv" path="res://Resources/Mutations/snowtime.tres" id="23_87con"]
+[ext_resource type="Resource" uid="uid://6tyno8f6a08" path="res://Resources/Mutations/stronkilll.tres" id="24_2aetq"]
+[ext_resource type="Resource" uid="uid://cj4g30ges4tkf" path="res://Resources/Mutations/strradius.tres" id="25_4j2le"]
+[ext_resource type="Resource" uid="uid://ctdqur3psiaej" path="res://Resources/Mutations/str_adder.tres" id="26_q71se"]
 
 [sub_resource type="Gradient" id="Gradient_klylv"]
 offsets = PackedFloat32Array(0, 0.39156628, 0.9518072, 1)
@@ -53,8 +78,9 @@ _data = {
 &"fade": SubResource("Animation_twnyg")
 }
 
-[node name="Title Screen" type="Node2D" unique_id=1476145404]
+[node name="Title Screen" type="Node2D" unique_id=1476145404 groups=["world"]]
 script = ExtResource("1_klylv")
+all_muts = Array[ExtResource("2_ne8fx")]([ExtResource("3_1sbh8"), ExtResource("4_sjffk"), ExtResource("5_v1jwd"), ExtResource("6_hgo8u"), ExtResource("7_h6bk8"), ExtResource("8_wp86v"), ExtResource("9_wqg3q"), ExtResource("10_e3ik3"), ExtResource("11_h5cty"), ExtResource("12_wsud6"), ExtResource("13_gf25o"), ExtResource("14_4ko3s"), ExtResource("15_5sgjo"), ExtResource("16_t1jex"), ExtResource("17_g3iaf"), ExtResource("18_qfn48"), ExtResource("19_vfwvj"), ExtResource("20_tv3xl"), ExtResource("21_4lfus"), ExtResource("22_ur6tn"), ExtResource("23_87con"), ExtResource("24_2aetq"), ExtResource("25_4j2le"), ExtResource("26_q71se")])
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1247836203]
 z_index = -2

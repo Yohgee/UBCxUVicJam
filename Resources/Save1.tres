@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="SavedMuts" format=3 uid="uid://b75b4knrbe50c"]
+
+[ext_resource type="Script" uid="uid://cyxiud2eru513" path="res://Scripts/mutation.gd" id="1_0tnbx"]
+[ext_resource type="Script" uid="uid://tvmibg6vjkeb" path="res://Scripts/SavedMuts.gd" id="1_ic4be"]
+
+[resource]
+script = ExtResource("1_ic4be")
